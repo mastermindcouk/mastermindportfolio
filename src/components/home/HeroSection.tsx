@@ -8,7 +8,11 @@ import { CheckCircle } from "lucide-react";
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: {
+    duration: 0.6,
+    delay,
+    ease: [0.22, 1, 0.36, 1] as const,
+  },
 });
 
 export function HeroSection() {
@@ -87,11 +91,15 @@ export function HeroSection() {
 
           {/* Right — floating code card */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden md:block animate-float"
-          >
+  initial={{ opacity: 0, x: 40 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{
+    duration: 0.7,
+    delay: 0.5,
+    ease: [0.22, 1, 0.36, 1] as const,
+  }}
+  className="hidden md:block animate-float"
+>
             <div className="card-glass glow-brand p-6 w-full max-w-sm mx-auto">
               {/* Card header */}
               <div className="flex items-center gap-2 mb-5 pb-4 border-b border-white/[0.06]">
