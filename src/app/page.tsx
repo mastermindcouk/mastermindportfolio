@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <TrustStrip />
+      {/* <TrustStrip /> */}
       <ServicesPreview />
       <FeaturedWork />
       <WhyUs />

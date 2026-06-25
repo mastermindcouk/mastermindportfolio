@@ -44,8 +44,7 @@ export function HeroSection() {
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight"
             >
               We Build{" "}
-              <span className="text-gradient">Scalable Digital Products</span>{" "}
-              — Fast.
+              <span className="text-gradient">Scalable Digital Products</span>{" "}Fast.
             </motion.h1>
 
             <motion.p
@@ -53,8 +52,7 @@ export function HeroSection() {
               className="text-lg text-gray-400 max-w-xl leading-relaxed"
             >
               ScaleStack Labs partners with startups and businesses to ship web
-              apps, SaaS platforms, and APIs. No bloat, no agency overhead —
-              just clean code and real results.
+              apps, SaaS platforms, and APIs. No bloat, no agency overhead just clean code and real results.
             </motion.p>
 
             <motion.div
@@ -69,7 +67,7 @@ export function HeroSection() {
               </Button>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               {...fadeUp(0.35)}
               className="flex items-center gap-4 pt-4"
             >
@@ -86,7 +84,7 @@ export function HeroSection() {
               <span className="text-sm text-gray-500">
                 Trusted by teams building the future
               </span>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Right — floating code card */}
