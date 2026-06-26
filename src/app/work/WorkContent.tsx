@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, Bot, FileText, Users } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { GlowOrb } from "@/components/ui/GlowOrb";
@@ -7,85 +7,68 @@ import Link from "next/link";
 
 const projects = [
   {
-    tag: "SaaS MVP",
-    name: "LogiFlow",
+    tag: "Real Estate",
+    name: "Vestify Hub",
     problem:
-      "Logistics company tracking deliveries in WhatsApp groups — built a real-time delivery tracking dashboard with driver app",
-    solution:
-      "We built a comprehensive logistics platform with real-time GPS tracking, automated dispatch, driver mobile app, and customer notifications. The system replaced chaotic WhatsApp threads with a clean, organized dashboard.",
-    results: [
-      "Delivery tracking time reduced by 80%",
-      "Customer satisfaction score increased to 4.8/5",
-      "Scaled to 50+ drivers in 3 months",
-    ],
+      "VestifyHub is a UK-based property investment platform connecting investors with high-quality real estate opportunities. Our team of experienced professionals is dedicated to delivering exceptional returns while maintaining the highest standards of transparency and integrity.",
     tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
     gradient: "from-brand-900 to-brand-700",
-    icon: Bot,
     slug: "logiflow",
+    liveUrl: "https://www.vestifyhub.com/",
   },
   {
-    tag: "FinTech",
-    name: "PocketLedger",
+    tag: "Health Care",
+    name: "Life is Good Global Care",
     problem:
-      "Small businesses managing finances in Excel — built a multi-currency accounting dashboard with automated reports",
-    solution:
-      "A multi-tenant accounting platform with automated bank feeds, invoice generation, expense tracking, and real-time financial reporting. Eliminated manual Excel workflows.",
-    results: [
-      "Reduced bookkeeping time by 60%",
-      "Processed 10,000+ transactions monthly",
-      "Adopted by 200+ small businesses",
-    ],
-    tech: ["React", "Supabase", "Tailwind", "Plaid"],
+      "Life Is Good Global Care supports care homes, supported living services, and mental health settings with trusted professionals and responsive account management.",
+    tech: ["React", "Supabase", "Tailwind"],
     gradient: "from-emerald-900 to-emerald-700",
-    icon: FileText,
     slug: "pocketledger",
+    liveUrl: "https://www.lifeisgoodglobalcare.co.uk/",
   },
   {
-    tag: "HR Platform",
-    name: "HireBase",
+    tag: "Ride-Hailing",
+    name: "Routa MVP",
     problem:
-      "Recruitment team losing candidates between tools — built an ATS with pipeline view, email integration, and analytics",
-    solution:
-      "A modern applicant tracking system with Kanban pipeline, automated email sequences, interview scheduling, and hiring analytics. Integrated with LinkedIn and major job boards.",
-    results: [
-      "Time-to-hire reduced by 40%",
-      "Team interviewed 3x more candidates per week",
-      "Centralized 5,000+ candidate profiles",
-    ],
-    tech: ["Next.js", "Prisma", "PostgreSQL", "SendGrid"],
-    gradient: "from-purple-900 via-brand-900 to-surface-400",
-    icon: Users,
-    slug: "hirebase",
+      "Routa EV is the infrastructure parent company integrating ride-hailing, interstate logistics, and renewable energy to power the next generation of African mobility.",
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    gradient: "from-brand-900 to-brand-700",
+    slug: "logiflow",
+    liveUrl: "https://www.routaev.com/",
   },
 ];
 
 const extraProjects = [
   {
-    tag: "E-Commerce",
-    name: "ShopVue",
-    icon: Bot,
-    problem: "Multi-vendor marketplace needing a modern storefront",
-    tech: ["Next.js", "Stripe", "Sanity CMS"],
-    gradient: "from-amber-900 to-amber-700",
-    slug: "shopvue",
+    tag: "SaaS",
+    name: "QR Geek MVP",
+    problem:
+      "QR codes shouldn't be complicated, expensive, or unreliable. We started QR Geek because existing solutions were either too basic for serious businesses or too complex for everyday users.",
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    gradient: "from-brand-900 to-brand-700",
+    slug: "logiflow",
+    liveUrl: "https://qr-geek.com/",
   },
   {
-    tag: "HealthTech",
-    name: "MediTrack",
-    icon: Bot,
-    problem: "Clinic management system with appointment scheduling",
-    tech: ["React", "Node.js", "MongoDB"],
-    gradient: "from-rose-900 to-rose-700",
-    slug: "meditrack",
+    tag: "Health Care",
+    name: "Life is Good Global Care",
+    problem:
+      "Life Is Good Global Care supports care homes, supported living services, and mental health settings with trusted professionals and responsive account management.",
+    tech: ["React", "Supabase", "Tailwind"],
+    gradient: "from-emerald-900 to-emerald-700",
+    slug: "pocketledger",
+    liveUrl: "https://www.lifeisgoodglobalcare.co.uk/",
   },
   {
-    tag: "EdTech",
-    name: "LearnPath",
-    icon: Bot,
-    problem: "Online course platform with interactive quizzes",
-    tech: ["Next.js", "Supabase", "Tailwind"],
-    gradient: "from-sky-900 to-sky-700",
-    slug: "learnpath",
+    tag: "Branding",
+    name: "Digitalli",
+    problem:
+      "Digitalli is the system behind how growing companies design,store, track, and distribute every branded asset.",
+    tech: ["Next.js", "Prisma", "PostgreSQL", "SendGrid"],
+    gradient: "from-purple-900 via-brand-900 to-surface-400",
+    slug: "hirebase",
+    liveUrl: "https://digitallikrafts.vercel.app/",
+    fullWidth: true,
   },
 ];
 
@@ -116,48 +99,77 @@ export function WorkContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...projects, ...extraProjects].map((p, i) => {
-              const Icon = p.icon || Bot;
+              const screenshotUrl = `https://v1.screenshot.11ty.dev/${encodeURIComponent(p.liveUrl ?? "")}/opengraph/`;
               return (
-                <AnimatedSection key={p.name} delay={(i % 6) * 0.05}>
-                  <Link
-                    href={p.slug === "shopvue" || p.slug === "meditrack" || p.slug === "learnpath" ? "#" : `/work/${p.slug}`}
-                    className="block group h-full"
-                  >
-                    <div className="card-glass overflow-hidden hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 h-full">
-                      <div
-                        className={`bg-gradient-to-br ${p.gradient} h-40 flex items-center justify-center relative`}
-                      >
-                        {/* Replace with actual screenshot */}
-                        <div className="absolute inset-0 bg-black/10" />
-                        <Icon className="w-14 h-14 text-white/30 group-hover:scale-110 group-hover:text-white/50 transition-all duration-500" />
-                        <span className="absolute top-3 right-3 text-[10px] font-medium px-2 py-0.5 rounded-full bg-white/10 text-white/70 border border-white/10">
-                          Concept Project
+                <AnimatedSection key={`${p.name}-${i}`} delay={(i % 6) * 0.05}>
+                  <div className="card-glass overflow-hidden hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 h-full group">
+                    {/* Screenshot preview */}
+                    <a
+                      href={p.liveUrl ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative h-40 overflow-hidden bg-surface-300"
+                    >
+                      <div className={`absolute inset-0 bg-gradient-to-br ${p.gradient}`} />
+                      {p.liveUrl && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={screenshotUrl}
+                          alt={`${p.name} preview`}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 relative"
+                          loading="lazy"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = "none";
+                          }}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-600/80 px-4 py-2 rounded-full">
+                          <ExternalLink className="w-4 h-4" />
+                          Visit Site
                         </span>
                       </div>
-                      <div className="p-5">
+                    </a>
+
+                    <div className="p-5">
+                      <div className="flex items-start justify-between mb-3">
                         <Badge>{p.tag}</Badge>
-                        <h3 className="text-lg font-bold text-white mt-3 mb-1 group-hover:text-brand-400 transition-colors">
-                          {p.name}
-                        </h3>
-                        <p className="text-sm text-gray-400 line-clamp-2 mb-3">
-                          {p.problem}
-                        </p>
-                        <div className="flex flex-wrap gap-1.5 mb-3">
-                          {p.tech.map((t) => (
-                            <span
-                              key={t}
-                              className="text-xs font-mono px-2 py-0.5 rounded bg-surface-400 text-gray-400"
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="inline-flex items-center gap-1 text-sm font-medium text-brand-400 group-hover:gap-2 transition-all">
-                          View Case Study <ArrowRight className="w-3.5 h-3.5" />
-                        </span>
+                        {p.liveUrl && (
+                          <a
+                            href={p.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] font-medium text-gray-500 hover:text-brand-400 transition-colors"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Live
+                          </a>
+                        )}
                       </div>
+                      <h3 className="text-lg font-bold text-white mb-1 group-hover:text-brand-400 transition-colors">
+                        {p.name}
+                      </h3>
+                      <p className="text-sm text-gray-400 line-clamp-2 mb-3">
+                        {p.problem}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {p.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="text-xs font-mono px-2 py-0.5 rounded bg-surface-400 text-gray-400"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                      <Link
+                        href={`/work/${p.slug}`}
+                        className="inline-flex items-center gap-1 text-sm font-medium text-brand-400 hover:gap-2 transition-all"
+                      >
+                        View Case Study <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
                     </div>
-                  </Link>
+                  </div>
                 </AnimatedSection>
               );
             })}

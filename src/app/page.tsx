@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/home/HeroSection";
-import { TrustStrip } from "@/components/home/TrustStrip";
+import { BrandLogos } from "@/components/home/BrandLogos";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { FeaturedWork } from "@/components/home/FeaturedWork";
 import { WhyUs } from "@/components/home/WhyUs";
@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      {/* <TrustStrip /> */}
+      <BrandLogos />
       <ServicesPreview />
       <FeaturedWork />
       <WhyUs />

@@ -59,7 +59,7 @@ export function AboutContent() {
             <div className="card-glass p-10 md:p-14 text-center max-w-4xl mx-auto">
               <p className="text-xl md:text-2xl font-display text-gray-200 leading-relaxed">
                 &ldquo;Our mission is to help startups and businesses turn ideas
-                into scalable digital products — without the agency
+                into scalable digital products without the agency
                 overhead.&rdquo;
               </p>
             </div>
@@ -67,67 +67,6 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">The Team</h2>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Founder */}
-            <AnimatedSection delay={0} className="md:col-span-1">
-              <div className="card-glass p-8 text-center group hover:border-brand-500/30 transition-all duration-300">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  SS
-                </div>
-                <h3 className="text-lg font-semibold text-white">
-                  Samuel S.
-                </h3>
-                <p className="text-sm text-brand-400 font-medium mt-1">
-                  Founder &amp; Lead Engineer
-                </p>
-                <p className="text-sm text-gray-400 mt-3">
-                  Full-stack engineer with 8+ years building products for
-                  startups and enterprises.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            {/* Frontend */}
-            <AnimatedSection delay={0.1}>
-              <div className="card-glass p-8 text-center group hover:border-brand-500/30 transition-all duration-300">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
-                  FE
-                </div>
-                <h3 className="text-lg font-semibold text-white">
-                  Frontend Specialists
-                </h3>
-                <p className="text-sm text-gray-400 mt-3">
-                  React, Next.js, and Tailwind experts crafting pixel-perfect
-                  interfaces.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            {/* Backend */}
-            <AnimatedSection delay={0.2}>
-              <div className="card-glass p-8 text-center group hover:border-brand-500/30 transition-all duration-300">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
-                  BE
-                </div>
-                <h3 className="text-lg font-semibold text-white">
-                  Backend Engineers
-                </h3>
-                <p className="text-sm text-gray-400 mt-3">
-                  Scalable APIs, databases, and cloud infrastructure
-                  specialists.
-                </p>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
 
       {/* Values */}
       <section className="py-20 bg-surface-100">
