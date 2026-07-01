@@ -26,7 +26,7 @@ const cols = [
     links: [
       { label: "Contact", href: "/contact" },
       { label: "LinkedIn", href: "https://linkedin.com" },
-      { label: "WhatsApp", href: "https://wa.me/2340000000000" },
+      { label: "WhatsApp", href: "https://wa.me/2348130845852" },
     ],
   },
 ];
@@ -50,12 +50,18 @@ export function Footer() {
               We build scalable digital products for startups and businesses.
               Fast delivery, modern stack, real results.
             </p>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex flex-col gap-2">
               <a
-                href="mailto:hello@scalestacklabs.com"
+                href="mailto:info@scalestacklad.online"
                 className="text-xs text-gray-500 hover:text-brand-400 transition-colors"
               >
-                hello@scalestacklabs.com
+                info@scalestacklad.online
+              </a>
+              <a
+                href="tel:+2348151073356"
+                className="text-xs text-gray-500 hover:text-brand-400 transition-colors"
+              >
+                +234 815 107 3356
               </a>
             </div>
           </div>

@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://scalestacklab.online"),
   title: "ScaleStack Labs — Build. Scale. Ship.",
   description:
     "We build scalable web and mobile solutions for startups and businesses. SaaS MVPs, dashboards, APIs, and more.",

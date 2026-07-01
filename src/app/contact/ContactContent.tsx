@@ -82,17 +82,29 @@ export function ContactContent() {
                 </h2>
 
                 <a
-                  href="mailto:hello@scalestacklabs.com"
+                  href="mailto:info@scalestacklad.online"
                   className="flex items-center gap-3 text-gray-400 hover:text-brand-400 transition-colors mb-4"
                 >
                   <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-400">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">hello@scalestacklabs.com</span>
+                  <span className="text-sm">info@scalestacklad.online</span>
                 </a>
 
                 <a
-                  href="https://wa.me/2340000000000"
+                  href="tel:+2348151073356"
+                  className="flex items-center gap-3 text-gray-400 hover:text-brand-400 transition-colors mb-4"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-400">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 5.25A2.25 2.25 0 015.25 3h2.1a1.5 1.5 0 011.45 1.05l.65 2.03a1.5 1.5 0 01-.41 1.61l-1.26 1.08a12.4 12.4 0 005.96 5.96l1.08-1.26a1.5 1.5 0 011.61-.41l2.03.65A1.5 1.5 0 0121 7.65v2.1A2.25 2.25 0 0118.75 12h-.92a14.17 14.17 0 01-11.83-11.83V3A2.25 2.25 0 013 5.25z" />
+                    </svg>
+                  </div>
+                  <span className="text-sm">+234 815 107 3356</span>
+                </a>
+
+                <a
+                  href="https://wa.me/2348130845852"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-400 hover:text-green-400 transition-colors mb-4"
@@ -100,7 +112,7 @@ export function ContactContent() {
                   <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-400">
                     <MessageCircle className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">Chat on WhatsApp</span>
+                  <span className="text-sm">0813 084 5852</span>
                 </a>
 
                 <a
@@ -142,7 +154,7 @@ export function ContactContent() {
 
               {/* WhatsApp button */}
               <a
-                href="https://wa.me/2340000000000"
+                href="https://wa.me/2348130845852"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-medium text-sm transition-all active:scale-[0.97] w-full justify-center"
