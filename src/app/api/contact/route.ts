@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     const fromEmail =
       process.env.CONTACT_EMAIL_FROM || "onboarding@resend.dev";
-    const toEmail = process.env.CONTACT_EMAIL_TO || "info@scalestacklad.online";
+    const toEmail = process.env.CONTACT_EMAIL_TO || "info@scalestacklab.online";
 
     // 1. Send notification email to the business
     const { error: businessError } = await resend.emails.send({
@@ -143,7 +143,7 @@ export async function POST(request: Request) {
               <td style="background: #f9f9fb; padding: 24px; text-align: center; border-top: 1px solid #eee;">
                 <p style="color: #888; font-size: 13px; margin: 0;">ScaleStack Labs — Build. Scale. Ship.</p>
                 <p style="color: #aaa; font-size: 11px; margin: 4px 0 0 0;">
-                  <a href="mailto:info@scalestacklad.online" style="color: #6366f1; text-decoration: none;">info@scalestacklad.online</a>
+                  <a href="mailto:info@scalestacklab.online" style="color: #6366f1; text-decoration: none;">info@scalestacklab.online</a>
                 </p>
               </td>
             </tr>

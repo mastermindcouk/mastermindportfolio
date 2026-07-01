@@ -52,10 +52,10 @@ export function Footer() {
             </p>
             <div className="mt-6 flex flex-col gap-2">
               <a
-                href="mailto:info@scalestacklad.online"
+                href="mailto:info@scalestacklab.online"
                 className="text-xs text-gray-500 hover:text-brand-400 transition-colors"
               >
-                info@scalestacklad.online
+                info@scalestacklab.online
               </a>
               <a
                 href="tel:+2348151073356"

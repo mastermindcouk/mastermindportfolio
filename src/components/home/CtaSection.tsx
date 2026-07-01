@@ -30,10 +30,10 @@ export function CtaSection() {
                     Start a Project →
                   </Button>
                   <a
-                    href="mailto:info@scalestacklad.online"
+                    href="mailto:info@scalestacklab.online"
                     className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-xl text-gray-400 hover:text-white hover:bg-surface-300 transition-all"
                   >
-                    info@scalestacklad.online
+                    info@scalestacklab.online
                   </a>
                 </div>
 
