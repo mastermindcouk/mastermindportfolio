@@ -4,21 +4,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { GlowOrb } from "@/components/ui/GlowOrb";
 import { Button } from "@/components/ui/Button";
-import { MessageCircle, Mail, CheckCircle, Send } from "lucide-react";
+import {
+  MessageCircle,
+  Mail,
+  CheckCircle,
+  Send,
+  Loader2,
+  AlertCircle,
+} from "lucide-react";
 
 const projectTypes = [
   "SaaS MVP",
   "Business Website",
+  "E-commerce",
   "Dashboard",
   "API",
   "Other",
 ];
 
 const budgetRanges = [
-  "< $2,000",
-  "$2,000–$5,000",
-  "$5,000–$15,000",
-  "$15,000+",
+  "Business Website - ₦350,000",
+  "E-commerce - ₦500,000",
+  "Custom Projects - Let's discuss",
 ];
 
 export function ContactContent() {
@@ -30,6 +37,8 @@ export function ContactContent() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -40,12 +49,32 @@ export function ContactContent() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission
-    setTimeout(() => {
+    setSending(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
       setSubmitted(true);
-    }, 500);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -113,20 +142,6 @@ export function ContactContent() {
                     <MessageCircle className="w-5 h-5" />
                   </div>
                   <span className="text-sm">0813 084 5852</span>
-                </a>
-
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-gray-400 hover:text-brand-400 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-400">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </div>
-                  <span className="text-sm">LinkedIn</span>
                 </a>
               </div>
 
@@ -322,9 +337,34 @@ export function ContactContent() {
                       />
                     </div>
 
-                    <Button type="submit" variant="primary" className="w-full">
-                      <Send className="w-4 h-4" />
-                      Send Message →
+                    {error && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-start gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-400"
+                      >
+                        <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+                        <span>{error}</span>
+                      </motion.div>
+                    )}
+
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      className="w-full"
+                      disabled={sending}
+                    >
+                      {sending ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          Send Message →
+                        </>
+                      )}
                     </Button>
                   </motion.form>
                 )}

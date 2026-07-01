@@ -105,7 +105,7 @@ export function BrandLogos() {
             transition={{
               x: {
                 repeat: Infinity,
-                duration: 30,
+                duration: 15,
                 ease: "linear",
               },
             }}
@@ -136,7 +136,7 @@ export function BrandLogos() {
             transition={{
               x: {
                 repeat: Infinity,
-                duration: 30,
+                duration: 15,
                 ease: "linear",
               },
             }}

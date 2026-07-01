@@ -16,55 +16,110 @@ const studies: Record<
     results: string[];
     tech: string[];
     gradient: string;
+    liveUrl: string;
   }
 > = {
-  logiflow: {
-    name: "LogiFlow",
-    tag: "SaaS MVP",
+  "vestify-hub": {
+    name: "Vestify Hub",
+    tag: "Real Estate",
     problem:
-      "A growing logistics company was managing delivery tracking through WhatsApp groups. Drivers would send voice notes and photos, which the ops team manually entered into spreadsheets. It was chaotic, error-prone, and impossible to scale.",
+      "VestifyHub is a UK-based property investment platform connecting investors with high-quality real estate opportunities. Their team needed a modern, trust-building digital presence to showcase opportunities and streamline investor onboarding.",
     solution:
-      "We built a real-time delivery tracking platform with a driver mobile app, web dashboard for operations, and customer-facing tracking page. Key features included live GPS tracking, automated dispatch, proof of delivery photos, and real-time notifications.",
+      "We built a high-performance property investment platform with a clean, professional design. The platform features property listings with detailed analytics, investor dashboards, secure authentication, and SEO-optimized content to attract qualified leads and build credibility in the competitive UK property market.",
     results: [
-      "Delivery tracking time reduced by 80%",
-      "Customer satisfaction score increased to 4.8/5",
-      "Scaled to 50+ drivers in 3 months",
-      "Zero lost packages since launch",
+      "Professional digital presence established for a UK property brand",
+      "SEO-optimized structure driving organic investor traffic",
+      "Seamless investor onboarding experience",
+      "Responsive, mobile-first design for on-the-go access",
     ],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox", "Redis", "Docker"],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
     gradient: "from-brand-900 to-brand-700",
+    liveUrl: "https://www.vestifyhub.com/",
   },
-  pocketledger: {
-    name: "PocketLedger",
-    tag: "FinTech",
+  lggc: {
+    name: "Life is Good Global Care",
+    tag: "Health Care",
     problem:
-      "Small business owners were juggling multiple Excel spreadsheets to track income, expenses, and invoices across different currencies. Bank reconciliation was a manual nightmare, and they had no real-time view of their financial health.",
+      "Life Is Good Global Care needed a professional web presence to showcase their care home, supported living, and mental health support services. They required a platform that instills trust and makes it easy for clients and partners to reach them.",
     solution:
-      "We built a multi-tenant accounting platform with automated bank feed integration, multi-currency support, invoice generation, expense tracking, and real-time financial dashboards. The system automated bank reconciliation and generated profit/loss reports on demand.",
+      "We developed a clean, compassionate website that clearly communicates their mission and services. The site includes detailed service pages, a contact and referral system, and accessibility-focused design to ensure ease of use for all visitors.",
     results: [
-      "Reduced bookkeeping time by 60%",
-      "Processed 10,000+ transactions monthly",
-      "Adopted by 200+ small businesses",
-      "99.9% bank reconciliation accuracy",
+      "Professional brand presence for a UK healthcare provider",
+      "Clear service breakdown for care homes & mental health support",
+      "Easy referral and contact system for clients and partners",
+      "Accessible, trust-building design",
     ],
-    tech: ["React", "Supabase", "Tailwind", "Plaid", "Chart.js"],
+    tech: ["React", "Supabase", "Tailwind"],
     gradient: "from-emerald-900 to-emerald-700",
+    liveUrl: "https://www.lifeisgoodglobalcare.co.uk/",
   },
-  hirebase: {
-    name: "HireBase",
-    tag: "HR Platform",
+  "routa-ev": {
+    name: "Routa MVP",
+    tag: "Ride-Hailing",
     problem:
-      "A recruitment agency was losing candidates between spreadsheets, email threads, and multiple job boards. The hiring pipeline was invisible, follow-ups were missed, and reporting was non-existent.",
+      "Routa EV needed an MVP to launch their vision as an infrastructure parent company integrating ride-hailing, interstate logistics, and renewable energy to power the next generation of African mobility.",
     solution:
-      "We built a modern Applicant Tracking System (ATS) with a Kanban pipeline view, automated email sequences, interview scheduling, and comprehensive hiring analytics. The platform integrated with LinkedIn, Indeed, and other job boards for automatic candidate import.",
+      "We built a scalable MVP showcasing Routa EV's integrated ecosystem. The platform covers their three core pillars — ride-hailing, interstate logistics, and renewable energy — with a clean brand identity and growth-ready architecture.",
     results: [
-      "Time-to-hire reduced by 40%",
-      "Team interviewed 3x more candidates per week",
-      "Centralized 5,000+ candidate profiles",
-      "Automated 80% of email communication",
+      "MVP launched to validate multi-pillar mobility concept",
+      "Clear brand identity established for African market entry",
+      "Scalable architecture ready for feature expansion",
+      "Integrated ride-hailing, logistics & energy verticals",
     ],
-    tech: ["Next.js", "Prisma", "PostgreSQL", "SendGrid", "BullMQ"],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    gradient: "from-brand-900 to-brand-700",
+    liveUrl: "https://www.routaev.com/",
+  },
+  "qr-geek": {
+    name: "QR Geek MVP",
+    tag: "SaaS",
+    problem:
+      "QR codes shouldn't be complicated, expensive, or unreliable. QR Geek identified that existing QR solutions were either too basic for serious businesses or too complex for everyday users — leaving a gap for a simple, powerful tool.",
+    solution:
+      "We developed a streamlined QR code generation platform that balances simplicity with professional features. The MVP includes custom QR code creation with branding options, analytics tracking, bulk generation, and a clean user dashboard.",
+    results: [
+      "MVP launched to disrupt the QR code market",
+      "Custom branding & analytics features for businesses",
+      "Bulk generation capability for enterprise use",
+      "Simple, intuitive user experience",
+    ],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    gradient: "from-brand-900 to-brand-700",
+    liveUrl: "https://qr-geek.com/",
+  },
+  "impact-city": {
+    name: "Impact City",
+    tag: "ImpactCity",
+    problem:
+      "ImpactCity needed a digital platform to provide different forms of development support that help people grow both personally and professionally, reaching a wider audience with their programs.",
+    solution:
+      "We built a comprehensive platform for ImpactCity that showcases their development programs, allows users to explore support options, and facilitates engagement with their community initiatives through an intuitive interface.",
+    results: [
+      "Centralized platform for personal & professional development",
+      "Improved discoverability of support programs",
+      "Community engagement streamlined through digital tools",
+      "Professional brand presence established",
+    ],
+    tech: ["React", "Supabase", "Tailwind"],
+    gradient: "from-emerald-900 to-emerald-700",
+    liveUrl: "https://impact-city.com/",
+  },
+  digitalli: {
+    name: "Digitalli",
+    tag: "Branding",
+    problem:
+      "Digitalli is the system behind how growing companies design, store, track, and distribute every branded asset. Growing businesses needed a centralized hub to manage their brand identity efficiently.",
+    solution:
+      "We created a brand asset management platform where teams can upload, organize, and share design assets, brand guidelines, templates, and marketing materials — ensuring brand consistency across every channel.",
+    results: [
+      "Centralized brand asset repository for growing companies",
+      "Streamlined design-to-distribution workflow",
+      "Brand consistency maintained across all channels",
+      "Efficient team collaboration on brand materials",
+    ],
+    tech: ["Next.js", "Prisma", "PostgreSQL", "SendGrid"],
     gradient: "from-purple-900 via-brand-900 to-surface-400",
+    liveUrl: "https://digitallikrafts.vercel.app/",
   },
 };
 
@@ -98,24 +153,33 @@ export function CaseStudyContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* Screenshot placeholder */}
+      {/* Screenshot */}
       <section className="py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div
-              className={`bg-gradient-to-br ${study.gradient} rounded-2xl h-64 md:h-96 flex items-center justify-center relative overflow-hidden`}
+            <a
+              href={study.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block bg-gradient-to-br ${study.gradient} rounded-2xl h-64 md:h-96 relative overflow-hidden group`}
             >
-              {/* Replace with real screenshots here */}
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="relative text-center">
-                <p className="text-white/40 text-sm font-mono">
-                  {study.name} Screenshot
-                </p>
-                <p className="text-white/20 text-xs mt-2">
-                  {/* Add real screenshots here */}
-                </p>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
+              {study.liveUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={`https://v1.screenshot.11ty.dev/${encodeURIComponent(study.liveUrl)}/opengraph/`}
+                  alt={`${study.name} screenshot`}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 relative"
+                  loading="lazy"
+                />
+              )}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                <span className="inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-600/80 px-4 py-2 rounded-full">
+                  <ExternalLink className="w-4 h-4" />
+                  Visit Site
+                </span>
               </div>
-            </div>
+            </a>
           </AnimatedSection>
         </div>
       </section>
@@ -192,7 +256,9 @@ export function CaseStudyContent({ slug }: { slug: string }) {
                 Start a Project →
               </Button>
               <a
-                href="#"
+                href={study.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-xl text-gray-400 hover:text-white hover:bg-surface-300 transition-all border border-white/10"
               >
                 <ExternalLink className="w-4 h-4" />

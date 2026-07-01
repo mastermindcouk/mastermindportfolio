@@ -9,6 +9,7 @@ interface ButtonProps {
   className?: string;
   size?: "sm" | "md" | "lg";
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export function Button({
@@ -19,9 +20,10 @@ export function Button({
   className,
   size = "md",
   type = "button",
+  disabled = false,
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-200 active:scale-[0.97]";
+    "inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-200 active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100";
   const sizes = {
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-sm",
@@ -42,7 +44,7 @@ export function Button({
       </Link>
     );
   return (
-    <button onClick={onClick} className={classes} type={type}>
+    <button onClick={onClick} className={classes} type={type} disabled={disabled}>
       {children}
     </button>
   );

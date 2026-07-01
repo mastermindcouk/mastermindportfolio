@@ -6,27 +6,12 @@ import { Button } from "@/components/ui/Button";
 
 const services = [
   {
-    id: "saas",
-    title: "SaaS MVP Development",
-    subtitle: "For founders with a validated idea",
-    description:
-      "Take your concept to a working product in weeks. We handle the entire stack — frontend, backend, database, and deployment — so you can start getting user feedback and traction immediately.",
-    includes: [
-      "Authentication & user management",
-      "Database design & setup",
-      "RESTful or GraphQL API",
-      "Admin panel / dashboard",
-      "CI/CD & deployment",
-      "Responsive design",
-    ],
-    timeline: "3–5 weeks",
-  },
-  {
     id: "web",
     title: "Business Websites & Landing Pages",
     subtitle: "For companies needing a professional web presence",
     description:
       "High-performance websites that convert visitors into customers. Built with modern frameworks for speed, accessibility, and search engine visibility.",
+    price: "₦350,000",
     includes: [
       "Responsive, mobile-first design",
       "Content management system",
@@ -38,11 +23,46 @@ const services = [
     timeline: "1–3 weeks",
   },
   {
+    id: "ecom",
+    title: "E-commerce Websites",
+    subtitle: "For businesses ready to sell online",
+    description:
+      "Full-featured online stores with secure payments, inventory management, and a seamless shopping experience across all devices.",
+    price: "₦500,000",
+    includes: [
+      "Product catalog & categories",
+      "Shopping cart & checkout",
+      "Secure payment integration",
+      "Order management system",
+      "Inventory tracking",
+      "Mobile-optimized storefront",
+    ],
+    timeline: "3–5 weeks",
+  },
+  {
+    id: "saas",
+    title: "SaaS MVP Development",
+    subtitle: "For founders with a validated idea",
+    description:
+      "Take your concept to a working product in weeks. We handle the entire stack — frontend, backend, database, and deployment — so you can start getting user feedback and traction immediately.",
+    price: "Custom Quote",
+    includes: [
+      "Authentication & user management",
+      "Database design & setup",
+      "RESTful or GraphQL API",
+      "Admin panel / dashboard",
+      "CI/CD & deployment",
+      "Responsive design",
+    ],
+    timeline: "3–5 weeks",
+  },
+  {
     id: "dash",
     title: "Admin Dashboards & Internal Tools",
     subtitle: "For operations teams",
     description:
       "Replace spreadsheets and scattered tools with a centralized, real-time dashboard. Custom-built for your specific workflows and data sources.",
+    price: "Custom Quote",
     includes: [
       "Interactive data tables & charts",
       "Role-based access control",
@@ -59,6 +79,7 @@ const services = [
     subtitle: "For products needing robust infrastructure",
     description:
       "Scalable, well-documented APIs that power your applications. Built with performance, security, and developer experience in mind.",
+    price: "Custom Quote",
     includes: [
       "REST & GraphQL endpoints",
       "Authentication & authorization",
@@ -118,14 +139,22 @@ export function ServicesContent() {
                       {service.description}
                     </p>
 
-                    <div className="flex items-center gap-2 mb-6">
-                      <Clock className="w-4 h-4 text-brand-400" />
-                      <span className="text-sm text-gray-400">
-                        Typical timeline:{" "}
-                        <span className="text-white font-medium">
-                          {service.timeline}
+                    <div className="flex items-center gap-4 mb-6 flex-wrap">
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4 text-brand-400" />
+                        <span className="text-sm text-gray-400">
+                          Timeline:{" "}
+                          <span className="text-white font-medium">
+                            {service.timeline}
+                          </span>
                         </span>
-                      </span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <span className="text-sm text-gray-400">Starting at</span>
+                        <span className="text-lg font-bold text-accent-500">
+                          {service.price}
+                        </span>
+                      </div>
                     </div>
 
                     <Button

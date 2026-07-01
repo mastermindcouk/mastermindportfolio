@@ -9,20 +9,35 @@ const caseStudies: Record<
     description: string;
   }
 > = {
-  logiflow: {
-    title: "LogiFlow — Real-Time Delivery Tracking",
+  "vestify-hub": {
+    title: "Vestify Hub — UK Property Investment Platform",
     description:
-      "How we built a real-time delivery tracking dashboard for a logistics company.",
+      "How we built a modern property investment platform for VestifyHub.",
   },
-  pocketledger: {
-    title: "PocketLedger — Multi-Currency Accounting",
+  lggc: {
+    title: "Life is Good Global Care — Healthcare Provider Website",
     description:
-      "How we built a multi-currency accounting dashboard for small businesses.",
+      "How we built a professional healthcare website for Life is Good Global Care.",
   },
-  hirebase: {
-    title: "HireBase — Modern Applicant Tracking System",
+  "routa-ev": {
+    title: "Routa MVP — African Mobility Platform",
     description:
-      "How we built an ATS with pipeline view, email integration, and analytics.",
+      "How we built an MVP for Routa EV's ride-hailing, logistics, and energy platform.",
+  },
+  "qr-geek": {
+    title: "QR Geek MVP — QR Code Generation Platform",
+    description:
+      "How we built a simple yet powerful QR code generation platform.",
+  },
+  "impact-city": {
+    title: "Impact City — Personal & Professional Development Platform",
+    description:
+      "How we built a development support platform for ImpactCity.",
+  },
+  digitalli: {
+    title: "Digitalli — Brand Asset Management Platform",
+    description:
+      "How we built a brand asset management system for Digitalli.",
   },
 };
 
