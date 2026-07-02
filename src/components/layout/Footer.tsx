@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Zap } from "lucide-react";
+import Image from "next/image";
 
 const cols = [
   {
@@ -38,14 +39,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="font-semibold text-white">
-                ScaleStack <span className="text-brand-400">Labs</span>
-              </span>
-            </Link>
+            <Image src="/images/logo.png" alt="Logo" width={100} height={100} className="w-auto" />
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
               We build scalable digital products for startups and businesses.
               Fast delivery, modern stack, real results.

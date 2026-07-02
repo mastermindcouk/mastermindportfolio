@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 const links = [
   { label: "Services", href: "/services" },
@@ -33,12 +34,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center group-hover:bg-brand-400 transition-colors">
-            <Zap className="w-4 h-4 text-white" strokeWidth={2.5} />
-          </div>
-          <span className="font-semibold text-white tracking-tight">
-            ScaleStack <span className="text-brand-400">Labs</span>
-          </span>
+          <Image src="/images/logo.png" alt="Logo" width={100} height={100} className="w-auto" />
         </Link>
 
         {/* Desktop nav */}
