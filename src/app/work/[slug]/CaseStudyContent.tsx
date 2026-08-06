@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
+import { ArrowRight, CheckCircle, Clapperboard } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -14,112 +14,105 @@ const studies: Record<
     problem: string;
     solution: string;
     results: string[];
-    tech: string[];
+    deliverables: string[];
     gradient: string;
-    liveUrl: string;
   }
 > = {
-  "vestify-hub": {
-    name: "Vestify Hub",
-    tag: "Real Estate",
+  "cinematic-travel-reel": {
+    name: "Cinematic Travel Reel",
+    tag: "Brand Film",
     problem:
-      "VestifyHub is a UK-based property investment platform connecting investors with high-quality real estate opportunities. Their team needed a modern, trust-building digital presence to showcase opportunities and streamline investor onboarding.",
+      "A travel brand had hours of beautiful raw footage but nothing that told their story in a way audiences connected with — flat edits, inconsistent color, and no sound design.",
     solution:
-      "We built a high-performance property investment platform with a clean, professional design. The platform features property listings with detailed analytics, investor dashboards, secure authentication, and SEO-optimized content to attract qualified leads and build credibility in the competitive UK property market.",
+      "We cut a story-driven brand film built around a clear narrative arc — cinematic color grading, layered sound design, and branded motion titles. The reel was then re-cut into platform-native versions for reels, stories, and paid placements.",
     results: [
-      "Professional digital presence established for a UK property brand",
-      "SEO-optimized structure driving organic investor traffic",
-      "Seamless investor onboarding experience",
-      "Responsive, mobile-first design for on-the-go access",
+      "A cinematic brand film that actually told a story",
+      "Consistent, film-grade color across every shot",
+      "Sound design and mix that raised production value",
+      "Social-ready cutdowns for every major platform",
     ],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    deliverables: ["Color Grading", "Sound Design", "Social Cuts", "Motion Titles"],
     gradient: "from-brand-900 to-brand-700",
-    liveUrl: "https://www.vestifyhub.com/",
   },
-  lggc: {
-    name: "Life is Good Global Care",
-    tag: "Health Care",
+  "cafe-brand-packaging": {
+    name: "Café Brand & Packaging",
+    tag: "Brand Identity",
     problem:
-      "Life Is Good Global Care needed a professional web presence to showcase their care home, supported living, and mental health support services. They required a platform that instills trust and makes it easy for clients and partners to reach them.",
+      "A beloved local café had strong coffee but a forgettable, inconsistent look — mismatched menus, packaging, and social graphics that didn't reflect the quality of the product.",
     solution:
-      "We developed a clean, compassionate website that clearly communicates their mission and services. The site includes detailed service pages, a contact and referral system, and accessibility-focused design to ensure ease of use for all visitors.",
+      "We built a complete visual identity from the ground up — logo system, color palette, typography, packaging, menu design, and brand guidelines — then rolled it out across store and social touchpoints for one cohesive, memorable look.",
     results: [
-      "Professional brand presence for a UK healthcare provider",
-      "Clear service breakdown for care homes & mental health support",
-      "Easy referral and contact system for clients and partners",
-      "Accessible, trust-building design",
+      "A cohesive identity customers immediately recognize",
+      "Packaging and menus that feel premium and on-brand",
+      "Clear brand guidelines for consistent future use",
+      "A social presence that finally matches the product",
     ],
-    tech: ["React", "Supabase", "Tailwind"],
+    deliverables: ["Logo Design", "Packaging", "Brand Guidelines", "Menu Design"],
     gradient: "from-emerald-900 to-emerald-700",
-    liveUrl: "https://www.lifeisgoodglobalcare.co.uk/",
   },
-  "routa-ev": {
-    name: "Routa MVP",
-    tag: "Ride-Hailing",
+  "product-launch-film": {
+    name: "Product Launch Film",
+    tag: "Campaign",
     problem:
-      "Routa EV needed an MVP to launch their vision as an infrastructure parent company integrating ride-hailing, interstate logistics, and renewable energy to power the next generation of African mobility.",
+      "A company was launching a new product with no strong launch creative — they needed a hero film that would excite an audience and convert paid ad traffic.",
     solution:
-      "We built a scalable MVP showcasing Routa EV's integrated ecosystem. The platform covers their three core pillars — ride-hailing, interstate logistics, and renewable energy — with a clean brand identity and growth-ready architecture.",
+      "We scripted, designed, and edited a high-energy launch film combining live product footage with motion graphics and kinetic typography. We then produced multiple ad cutdowns, thumbnails, and platform variants to maximize reach across paid channels.",
     results: [
-      "MVP launched to validate multi-pillar mobility concept",
-      "Clear brand identity established for African market entry",
-      "Scalable architecture ready for feature expansion",
-      "Integrated ride-hailing, logistics & energy verticals",
+      "Thousands of views across paid and organic channels",
+      "A hero film and ad cutdowns for every platform",
+      "Kinetic type and motion that boosted engagement and recall",
+      "A launch asset pack ready for multi-channel rollout",
     ],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
-    gradient: "from-brand-900 to-brand-700",
-    liveUrl: "https://www.routaev.com/",
-  },
-  "qr-geek": {
-    name: "QR Geek MVP",
-    tag: "SaaS",
-    problem:
-      "QR codes shouldn't be complicated, expensive, or unreliable. QR Geek identified that existing QR solutions were either too basic for serious businesses or too complex for everyday users — leaving a gap for a simple, powerful tool.",
-    solution:
-      "We developed a streamlined QR code generation platform that balances simplicity with professional features. The MVP includes custom QR code creation with branding options, analytics tracking, bulk generation, and a clean user dashboard.",
-    results: [
-      "MVP launched to disrupt the QR code market",
-      "Custom branding & analytics features for businesses",
-      "Bulk generation capability for enterprise use",
-      "Simple, intuitive user experience",
-    ],
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
-    gradient: "from-brand-900 to-brand-700",
-    liveUrl: "https://qr-geek.com/",
-  },
-  "impact-city": {
-    name: "Impact City",
-    tag: "ImpactCity",
-    problem:
-      "ImpactCity needed a digital platform to provide different forms of development support that help people grow both personally and professionally, reaching a wider audience with their programs.",
-    solution:
-      "We built a comprehensive platform for ImpactCity that showcases their development programs, allows users to explore support options, and facilitates engagement with their community initiatives through an intuitive interface.",
-    results: [
-      "Centralized platform for personal & professional development",
-      "Improved discoverability of support programs",
-      "Community engagement streamlined through digital tools",
-      "Professional brand presence established",
-    ],
-    tech: ["React", "Supabase", "Tailwind"],
-    gradient: "from-emerald-900 to-emerald-700",
-    liveUrl: "https://impact-city.com/",
-  },
-  digitalli: {
-    name: "Digitalli",
-    tag: "Branding",
-    problem:
-      "Digitalli is the system behind how growing companies design, store, track, and distribute every branded asset. Growing businesses needed a centralized hub to manage their brand identity efficiently.",
-    solution:
-      "We created a brand asset management platform where teams can upload, organize, and share design assets, brand guidelines, templates, and marketing materials — ensuring brand consistency across every channel.",
-    results: [
-      "Centralized brand asset repository for growing companies",
-      "Streamlined design-to-distribution workflow",
-      "Brand consistency maintained across all channels",
-      "Efficient team collaboration on brand materials",
-    ],
-    tech: ["Next.js", "Prisma", "PostgreSQL", "SendGrid"],
+    deliverables: ["Scripting", "Motion Graphics", "Ad Cutdowns", "Thumbnails"],
     gradient: "from-purple-900 via-brand-900 to-surface-400",
-    liveUrl: "https://digitallikrafts.vercel.app/",
+  },
+  "social-campaign-suite": {
+    name: "Social Campaign Suite",
+    tag: "Social Media",
+    problem:
+      "A DTC brand was posting inconsistently with disjointed visuals and low engagement — they needed a monthly content system that was on-brand and built for each platform.",
+    solution:
+      "We produced a full campaign suite — platform-native reels, static ads, carousels, and motion stings — designed from one creative direction. Every asset was delivered in the right format for its channel so the brand stayed consistent and engaging all month.",
+    results: [
+      "A complete, platform-native monthly content kit",
+      "Consistent on-brand visuals across every channel",
+      "Higher engagement from reels and motion content",
+      "Clear system the brand can brief and scale",
+    ],
+    deliverables: ["Reels Editing", "Static Ads", "Carousels", "Motion Stings"],
+    gradient: "from-brand-900 to-brand-700",
+  },
+  "podcast-rebrand": {
+    name: "Podcast Rebrand & Edit",
+    tag: "Podcast",
+    problem:
+      "A growing podcast had great conversations but dated visuals and slow, boring edits — episodes weren't standing out in crowded feeds.",
+    solution:
+      "We handled the full multi-cam edit and gave the show a fresh identity — a new intro animation, lower thirds, and show-notes graphics. We also cut a social clip pack so every episode could be promoted across platforms.",
+    results: [
+      "Polished multi-cam edits that keep viewers hooked",
+      "A refreshed visual identity that looks professional",
+      "Lower thirds and motion that reinforce the brand",
+      "A ready-to-post clip pack for every episode",
+    ],
+    deliverables: ["Multi-cam Edit", "Show Notes Graphics", "Intro Animation", "Clip Pack"],
+    gradient: "from-emerald-900 to-emerald-700",
+  },
+  "live-event-graphics": {
+    name: "Live Event Graphics",
+    tag: "Events",
+    problem:
+      "A corporate gala needed broadcast-quality visuals — LED loop content, speaker titles, and a polished aftermovie — to feel as professional as the event itself.",
+    solution:
+      "We designed and delivered LED loop content, lower thirds, and title cards for the live screens, then cut a cinematic aftermovie edit that captured the energy of the night and gave the brand shareable content afterward.",
+    results: [
+      "Broadcast-ready visuals across all live screens",
+      "Clean speaker titles and lower thirds throughout",
+      "A cinematic aftermovie the brand can reuse for months",
+      "An event that looked as premium as it felt",
+    ],
+    deliverables: ["LED Loop Content", "Lower Thirds", "Title Cards", "Aftermovie Edit"],
+    gradient: "from-purple-900 via-brand-900 to-surface-400",
   },
 };
 
@@ -153,33 +146,20 @@ export function CaseStudyContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* Screenshot */}
+      {/* Cover */}
       <section className="py-8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <a
-              href={study.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`block bg-gradient-to-br ${study.gradient} rounded-2xl h-64 md:h-96 relative overflow-hidden group`}
-            >
+            <div className={`block bg-gradient-to-br ${study.gradient} rounded-2xl h-64 md:h-96 relative overflow-hidden group`}>
+              <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-20 pointer-events-none" style={{ backgroundSize: "48px 48px" }} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
-              {study.liveUrl && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={`https://v1.screenshot.11ty.dev/${encodeURIComponent(study.liveUrl)}/opengraph/`}
-                  alt={`${study.name} screenshot`}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 relative"
-                  loading="lazy"
-                />
-              )}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+              <div className="absolute inset-0 flex items-center justify-center z-20">
                 <span className="inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-600/80 px-4 py-2 rounded-full">
-                  <ExternalLink className="w-4 h-4" />
-                  Visit Site
+                  <Clapperboard className="w-4 h-4" />
+                  {study.tag}
                 </span>
               </div>
-            </a>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -219,18 +199,18 @@ export function CaseStudyContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Deliverables */}
       <section className="py-12 bg-surface-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <h2 className="text-2xl font-bold text-white mb-6">
-              Tech Stack
+              What We Delivered
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              {study.tech.map((t) => (
+              {study.deliverables.map((t) => (
                 <span
                   key={t}
-                  className="px-4 py-2 rounded-xl bg-surface-300 text-sm font-mono text-gray-300 border border-white/[0.06]"
+                  className="px-4 py-2 rounded-xl bg-surface-300 text-sm text-gray-300 border border-white/[0.06]"
                 >
                   {t}
                 </span>
@@ -248,22 +228,13 @@ export function CaseStudyContent({ slug }: { slug: string }) {
               Want a similar result?
             </h2>
             <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-              Let&apos;s build something great together. Start with a free
+              Let&apos;s create something great together. Start with a free
               discovery call.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button href="/contact" variant="primary" size="lg">
                 Start a Project →
               </Button>
-              <a
-                href={study.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-xl text-gray-400 hover:text-white hover:bg-surface-300 transition-all border border-white/10"
-              >
-                <ExternalLink className="w-4 h-4" />
-                Live Demo
-              </a>
             </div>
           </AnimatedSection>
         </div>

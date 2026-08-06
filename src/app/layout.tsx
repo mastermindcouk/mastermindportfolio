@@ -7,14 +7,15 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://scalestacklab.online"),
-  title: "ScaleStack Labs — Build. Scale. Ship.",
+  metadataBase: new URL("https://mastermind.scalestacklab.online"),
+  title: "Master Mind",
   description:
-    "We build scalable web and mobile solutions for startups and businesses. SaaS MVPs, dashboards, APIs, and more.",
+    "Master Mind is a digital production company crafting standout video editing, motion graphics, and graphic design that make brands unforgettable.",
   openGraph: {
-    title: "ScaleStack Labs",
-    description: "Scalable digital products, shipped fast.",
-    siteName: "ScaleStack Labs",
+    title: "Master Mind",
+    description:
+      "Video editing, graphic design & creative production that makes your brand unforgettable.",
+    siteName: "Master Mind",
   },
 };
 

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://scalestacklab.online/sitemap.xml",
+    sitemap: "https://mastermind.scalestacklab.online/sitemap.xml",
   };
 }

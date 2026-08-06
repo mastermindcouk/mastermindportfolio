@@ -88,7 +88,7 @@ export function BrandLogos() {
             transition={{ duration: 0.5 }}
             className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500"
           >
-            Trusted by innovative teams
+            Brands that trust Master Mind
           </motion.p>
         </div>
 

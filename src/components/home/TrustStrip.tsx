@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 
 const items = [
-  "⚡ Fast Delivery (2–6 weeks)",
-  "🧱 Modern Tech Stack",
-  "💰 Startup-Friendly Pricing",
-  "🎨 UI/UX Included",
-  "🔒 Clean, Scalable Architecture",
-  "🤝 Full Product Team",
+  "⚡ Fast Turnaround (24–72h)",
+  "🎬 Video Editing & Post",
+  "🎨 Graphic Design & Branding",
+  "📱 Social & Broadcast Ready",
+  "🔁 Clear, Focused Revisions",
+  "🤝 Dedicated Creative Team",
 ];
 
 export function TrustStrip() {

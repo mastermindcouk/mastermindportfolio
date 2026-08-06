@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicesContent } from "./ServicesContent";
 
 export const metadata: Metadata = {
-  title: "Services — ScaleStack Labs",
+  title: "Services — Master Mind",
   description:
-    "We build SaaS MVPs, business websites, admin dashboards, and API & backend systems for startups and businesses.",
+    "Video editing, graphic design, motion graphics, and brand identity services that make your content stand out.",
 };
 
 export default function ServicesPage() {

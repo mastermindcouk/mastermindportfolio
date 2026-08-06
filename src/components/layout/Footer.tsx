@@ -10,16 +10,16 @@ const cols = [
     links: [
       { label: "About", href: "/about" },
       { label: "Work", href: "/work" },
-      { label: "Blog", href: "/blog" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Services",
     links: [
-      { label: "SaaS MVPs", href: "/services#saas" },
-      { label: "Websites", href: "/services#web" },
-      { label: "Dashboards", href: "/services#dash" },
-      { label: "APIs", href: "/services#api" },
+      { label: "Video Editing", href: "/services#video" },
+      { label: "Graphic Design", href: "/services#design" },
+      { label: "Motion Graphics", href: "/services#motion" },
+      { label: "Brand Identity", href: "/services#brand" },
     ],
   },
   {
@@ -41,15 +41,16 @@ export function Footer() {
           <div className="col-span-2">
             <Image src="/images/logo.png" alt="Logo" width={100} height={100} className="w-auto" />
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-              We build scalable digital products for startups and businesses.
-              Fast delivery, modern stack, real results.
+              Master Mind is a digital production company crafting standout
+              video editing and graphic design that makes your brand
+              unforgettable.
             </p>
             <div className="mt-6 flex flex-col gap-2">
               <a
-                href="mailto:info@scalestacklab.online"
+                href="mailto:mastermind.co.uk@gmail.com"
                 className="text-xs text-gray-500 hover:text-brand-400 transition-colors"
               >
-                info@scalestacklab.online
+                mastermind.co.uk@gmail.com
               </a>
               <a
                 href="tel:+2348151073356"
@@ -84,7 +85,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} ScaleStack Labs. All rights reserved.
+            © {new Date().getFullYear()} Master Mind. All rights reserved.
           </p>
           <p className="text-xs text-gray-600">
             Built with Next.js · Tailwind CSS · Framer Motion

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { AboutContent } from "./AboutContent";
 
 export const metadata: Metadata = {
-  title: "About — ScaleStack Labs",
+  title: "About — Master Mind",
   description:
-    "We're a lean team of builders obsessed with shipping products that scale.",
+    "We're a creative studio crafting standout video editing and graphic design for brands that want to be remembered.",
 };
 
 export default function AboutPage() {

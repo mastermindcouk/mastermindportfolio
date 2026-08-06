@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, Clapperboard } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { GlowOrb } from "@/components/ui/GlowOrb";
@@ -7,68 +7,61 @@ import Link from "next/link";
 
 const projects = [
   {
-    tag: "Real Estate",
-    name: "Vestify Hub",
-    problem:
-      "VestifyHub is a UK-based property investment platform connecting investors with high-quality real estate opportunities. Our team of experienced professionals is dedicated to delivering exceptional returns while maintaining the highest standards of transparency and integrity.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    tag: "Brand Film",
+    name: "Cinematic Travel Reel",
+    blurb:
+      "A story-driven brand film cut from raw travel footage with cinematic color grading, sound design, and social-ready edits.",
+    deliverables: ["Color Grading", "Sound Design", "Social Cuts", "Motion Titles"],
     gradient: "from-brand-900 to-brand-700",
-    slug: "vestify-hub",
-    liveUrl: "https://www.vestifyhub.com/",
+    slug: "cinematic-travel-reel",
   },
   {
-    tag: "Health Care",
-    name: "Life is Good Global Care",
-    problem:
-      "Life Is Good Global Care supports care homes, supported living services, and mental health settings with trusted professionals and responsive account management.",
-    tech: ["React", "Supabase", "Tailwind"],
+    tag: "Brand Identity",
+    name: "Café Brand & Packaging",
+    blurb:
+      "A complete visual identity system — logo, palette, packaging, and menu design — that turned a local café into a beloved brand.",
+    deliverables: ["Logo Design", "Packaging", "Brand Guidelines", "Menu Design"],
     gradient: "from-emerald-900 to-emerald-700",
-    slug: "lggc",
-    liveUrl: "https://www.lifeisgoodglobalcare.co.uk/",
+    slug: "cafe-brand-packaging",
   },
   {
-    tag: "Ride-Hailing",
-    name: "Routa MVP",
-    problem:
-      "Routa EV is the infrastructure parent company integrating ride-hailing, interstate logistics, and renewable energy to power the next generation of African mobility.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
-    gradient: "from-brand-900 to-brand-700",
-    slug: "routa-ev",
-    liveUrl: "https://www.routaev.com/",
+    tag: "Campaign",
+    name: "Product Launch Film",
+    blurb:
+      "A high-energy launch film with motion graphics, kinetic type, and ad cutdowns that drove thousands of views across paid channels.",
+    deliverables: ["Scripting", "Motion Graphics", "Ad Cutdowns", "Thumbnails"],
+    gradient: "from-purple-900 via-brand-900 to-surface-400",
+    slug: "product-launch-film",
   },
 ];
 
 const extraProjects = [
   {
-    tag: "SaaS",
-    name: "QR Geek MVP",
-    problem:
-      "QR codes shouldn't be complicated, expensive, or unreliable. We started QR Geek because existing solutions were either too basic for serious businesses or too complex for everyday users.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Mapbox"],
+    tag: "Social Media",
+    name: "Social Campaign Suite",
+    blurb:
+      "A full set of platform-native reels, static ads, carousels, and motion stings that kept a DTC brand consistent and engaging all month.",
+    deliverables: ["Reels Editing", "Static Ads", "Carousels", "Motion Stings"],
     gradient: "from-brand-900 to-brand-700",
-    slug: "qr-geek",
-    liveUrl: "https://qr-geek.com/",
+    slug: "social-campaign-suite",
   },
   {
-    tag: "ImpactCity",
-    name: "Impact City",
-    problem:
-      "ImpactCity provides different forms of development support that help people grow both personally and professionally.",
-    tech: ["React", "Supabase", "Tailwind"],
+    tag: "Podcast",
+    name: "Podcast Rebrand & Edit",
+    blurb:
+      "Multi-cam podcast editing with a fresh visual identity — intro animation, lower thirds, and a clip pack built for social distribution.",
+    deliverables: ["Multi-cam Edit", "Show Notes Graphics", "Intro Animation", "Clip Pack"],
     gradient: "from-emerald-900 to-emerald-700",
-    slug: "impact-city",
-    liveUrl: "https://impact-city.com/",
+    slug: "podcast-rebrand",
   },
   {
-    tag: "Branding",
-    name: "Digitalli",
-    problem:
-      "Digitalli is the system behind how growing companies design,store, track, and distribute every branded asset.",
-    tech: ["Next.js", "Prisma", "PostgreSQL", "SendGrid"],
+    tag: "Events",
+    name: "Live Event Graphics",
+    blurb:
+      "LED loop content, lower thirds, title cards, and a polished aftermovie edit that made a corporate gala feel broadcast-ready.",
+    deliverables: ["LED Loop Content", "Lower Thirds", "Title Cards", "Aftermovie Edit"],
     gradient: "from-purple-900 via-brand-900 to-surface-400",
-    slug: "digitalli",
-    liveUrl: "https://digitallikrafts.vercel.app/",
-    fullWidth: true,
+    slug: "live-event-graphics",
   },
 ];
 
@@ -88,7 +81,7 @@ export function WorkContent() {
               Our <span className="text-gradient">Work</span>
             </h1>
             <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-              Real projects we&apos;ve built for real businesses.
+              Video and design projects we&apos;ve crafted for real brands.
             </p>
           </AnimatedSection>
         </div>
@@ -99,64 +92,36 @@ export function WorkContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...projects, ...extraProjects].map((p, i) => {
-              const screenshotUrl = `https://v1.screenshot.11ty.dev/${encodeURIComponent(p.liveUrl ?? "")}/opengraph/`;
               return (
                 <AnimatedSection key={`${p.name}-${i}`} delay={(i % 6) * 0.05}>
                   <div className="card-glass overflow-hidden hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 h-full group">
-                    {/* Screenshot preview */}
-                    <a
-                      href={p.liveUrl ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block relative h-40 overflow-hidden bg-surface-300"
-                    >
-                      <div className={`absolute inset-0 bg-gradient-to-br ${p.gradient}`} />
-                      {p.liveUrl && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={screenshotUrl}
-                          alt={`${p.name} preview`}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 relative"
-                          loading="lazy"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = "none";
-                          }}
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    {/* Cover preview */}
+                    <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
+                      <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-20 pointer-events-none" style={{ backgroundSize: "48px 48px" }} />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span className="inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-600/80 px-4 py-2 rounded-full">
-                          <ExternalLink className="w-4 h-4" />
-                          Visit Site
+                          <Clapperboard className="w-4 h-4" />
+                          View Case Study
                         </span>
                       </div>
-                    </a>
+                    </div>
 
                     <div className="p-5">
-                      <div className="flex items-start justify-between mb-3">
+                      <div className="mb-3">
                         <Badge>{p.tag}</Badge>
-                        {p.liveUrl && (
-                          <a
-                            href={p.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[11px] font-medium text-gray-500 hover:text-brand-400 transition-colors"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                            Live
-                          </a>
-                        )}
                       </div>
                       <h3 className="text-lg font-bold text-white mb-1 group-hover:text-brand-400 transition-colors">
                         {p.name}
                       </h3>
                       <p className="text-sm text-gray-400 line-clamp-2 mb-3">
-                        {p.problem}
+                        {p.blurb}
                       </p>
                       <div className="flex flex-wrap gap-1.5 mb-3">
-                        {p.tech.map((t) => (
+                        {p.deliverables.map((t) => (
                           <span
                             key={t}
-                            className="text-xs font-mono px-2 py-0.5 rounded bg-surface-400 text-gray-400"
+                            className="text-xs px-2 py-0.5 rounded bg-surface-400 text-gray-400"
                           >
                             {t}
                           </span>

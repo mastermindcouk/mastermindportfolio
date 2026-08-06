@@ -18,11 +18,11 @@ export function CtaSection() {
               {/* Content */}
               <div className="relative z-10 max-w-2xl mx-auto space-y-6">
                 <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                  Have an idea? Let&apos;s build it together.
+                  Have a project? Let&apos;s create something unforgettable.
                 </h2>
                 <p className="text-lg text-gray-400">
-                  From MVP to full product — we move fast and build things that
-                  last.
+                  From one-off edits to full campaigns — tell us what you need
+                  and we&apos;ll craft it.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 pt-4">
@@ -30,10 +30,10 @@ export function CtaSection() {
                     Start a Project →
                   </Button>
                   <a
-                    href="mailto:info@scalestacklab.online"
+                    href="mailto:mastermind.co.uk@gmail.com"
                     className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-xl text-gray-400 hover:text-white hover:bg-surface-300 transition-all"
                   >
-                    info@scalestacklab.online
+                    mastermind.co.uk@gmail.com
                   </a>
                 </div>
 

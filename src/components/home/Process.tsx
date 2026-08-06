@@ -1,38 +1,44 @@
 "use client";
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { MessageSquare, Pen, Code2, Rocket, HeartHandshake } from "lucide-react";
+import {
+  MessageSquare,
+  Lightbulb,
+  Clapperboard,
+  RefreshCw,
+  Rocket,
+} from "lucide-react";
 
 const steps = [
   {
     num: "01",
     icon: MessageSquare,
-    title: "Discovery",
-    desc: "We understand your goals, users, and constraints in a focused kick-off call",
+    title: "Brief & Discovery",
+    desc: "We dig into your brand, goals, and audience so every frame and pixel is on-message",
   },
   {
     num: "02",
-    icon: Pen,
-    title: "Design",
-    desc: "UI/UX wireframes and high-fidelity mockups before a line of code is written",
+    icon: Lightbulb,
+    title: "Concept & Script",
+    desc: "We map the story — script, storyboard, mood boards, and a clear creative direction",
   },
   {
     num: "03",
-    icon: Code2,
-    title: "Build",
-    desc: "Iterative development with weekly demos — you always know what's happening",
+    icon: Clapperboard,
+    title: "Edit & Design",
+    desc: "Our editors and designers craft the content, keeping you in the loop with previews",
   },
   {
     num: "04",
-    icon: Rocket,
-    title: "Test & Launch",
-    desc: "QA, performance checks, and deployment to production",
+    icon: RefreshCw,
+    title: "Review & Refine",
+    desc: "Fast, focused revision cycles until every detail feels right",
   },
   {
     num: "05",
-    icon: HeartHandshake,
-    title: "Support",
-    desc: "Post-launch monitoring and 30-day support included on all projects",
+    icon: Rocket,
+    title: "Deliver & Support",
+    desc: "Final export in every format you need, plus ongoing support for updates",
   },
 ];
 
@@ -43,7 +49,7 @@ export function Process() {
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">How We Work</h2>
           <p className="mt-4 text-lg text-gray-400">
-            A process designed for speed without sacrificing quality
+            A process designed for stand-out creative without the back and forth
           </p>
         </AnimatedSection>
 

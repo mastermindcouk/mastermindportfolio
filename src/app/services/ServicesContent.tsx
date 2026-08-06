@@ -6,89 +6,72 @@ import { Button } from "@/components/ui/Button";
 
 const services = [
   {
-    id: "web",
-    title: "Business Websites & Landing Pages",
-    subtitle: "For companies needing a professional web presence",
+    id: "video",
+    title: "Video Editing & Post Production",
+    subtitle: "For brands that want polished, story-driven video",
     description:
-      "High-performance websites that convert visitors into customers. Built with modern frameworks for speed, accessibility, and search engine visibility.",
-    price: "₦350,000",
+      "From raw footage to final cut, we deliver cinematic editing, color grading, sound design, and social-ready exports that help your message stand out.",
+    price: "Custom Quote",
     includes: [
-      "Responsive, mobile-first design",
-      "Content management system",
-      "SEO optimization",
-      "Analytics integration",
-      "Contact forms & lead capture",
-      "Performance optimization",
+      "Story-driven video editing",
+      "Color grading & correction",
+      "Sound design & mixing",
+      "Social-ready export deliverables",
+      "Captioning & subtitling",
+      "Fast revision cycles",
+    ],
+    timeline: "1–2 weeks",
+  },
+  {
+    id: "design",
+    title: "Graphic Design & Brand Visuals",
+    subtitle: "For companies needing memorable campaigns and assets",
+    description:
+      "We create stunning visuals for digital and print, from brand identity to social graphics, ads, presentations, and marketing collateral.",
+    price: "Custom Quote",
+    includes: [
+      "Logo and brand identity",
+      "Social media graphics",
+      "Ad creative and banners",
+      "Print-ready collateral",
+      "Presentation and pitch deck design",
+      "Brand style guidelines",
     ],
     timeline: "1–3 weeks",
   },
   {
-    id: "ecom",
-    title: "E-commerce Websites",
-    subtitle: "For businesses ready to sell online",
+    id: "motion",
+    title: "Motion Graphics & Animation",
+    subtitle: "For content that moves and captivates",
     description:
-      "Full-featured online stores with secure payments, inventory management, and a seamless shopping experience across all devices.",
-    price: "₦500,000",
-    includes: [
-      "Product catalog & categories",
-      "Shopping cart & checkout",
-      "Secure payment integration",
-      "Order management system",
-      "Inventory tracking",
-      "Mobile-optimized storefront",
-    ],
-    timeline: "3–5 weeks",
-  },
-  {
-    id: "saas",
-    title: "SaaS MVP Development",
-    subtitle: "For founders with a validated idea",
-    description:
-      "Take your concept to a working product in weeks. We handle the entire stack — frontend, backend, database, and deployment — so you can start getting user feedback and traction immediately.",
+      "Bring your ideas to life with expressive motion graphics, animated intros, explainer sequences, and social clips designed for maximum engagement.",
     price: "Custom Quote",
     includes: [
-      "Authentication & user management",
-      "Database design & setup",
-      "RESTful or GraphQL API",
-      "Admin panel / dashboard",
-      "CI/CD & deployment",
-      "Responsive design",
+      "Logo animation",
+      "Kinetic typography",
+      "Explainer scenes",
+      "Lower thirds and transitions",
+      "Looping social content",
+      "Broadcast-ready deliverables",
     ],
-    timeline: "3–5 weeks",
+    timeline: "2–4 weeks",
   },
   {
-    id: "dash",
-    title: "Admin Dashboards & Internal Tools",
-    subtitle: "For operations teams",
+    id: "brand",
+    title: "Brand Identity & Creative Direction",
+    subtitle: "For teams building a cohesive visual voice",
     description:
-      "Replace spreadsheets and scattered tools with a centralized, real-time dashboard. Custom-built for your specific workflows and data sources.",
+      "We help define your brand through consistent creative direction, campaign concepts, and visual systems that make your story unforgettable.",
     price: "Custom Quote",
     includes: [
-      "Interactive data tables & charts",
-      "Role-based access control",
-      "Data import/export",
-      "Third-party integrations",
-      "Real-time updates",
-      "Custom reporting",
+      "Brand positioning and messaging",
+      "Visual mood boards",
+      "Creative concept development",
+      "Marketing campaign assets",
+      "Design system guidance",
+      "Launch-ready creative packages",
     ],
-    timeline: "4–8 weeks",
-  },
-  {
-    id: "api",
-    title: "API & Backend Systems",
-    subtitle: "For products needing robust infrastructure",
-    description:
-      "Scalable, well-documented APIs that power your applications. Built with performance, security, and developer experience in mind.",
-    price: "Custom Quote",
-    includes: [
-      "REST & GraphQL endpoints",
-      "Authentication & authorization",
-      "Rate limiting & caching",
-      "Database optimization",
-      "API documentation (OpenAPI)",
-      "Monitoring & logging",
-    ],
-    timeline: "3–6 weeks",
+    timeline: "2–4 weeks",
   },
 ];
 
@@ -105,11 +88,11 @@ export function ServicesContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              What We <span className="text-gradient">Build</span>
+              What We <span className="text-gradient">Create</span>
             </h1>
             <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-              From MVPs to enterprise-grade systems — we design and develop
-              digital products that move the needle.
+              Video editing, graphic design, and motion services made to grow your
+              brand and engage your audience.
             </p>
           </AnimatedSection>
         </div>

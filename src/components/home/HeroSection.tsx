@@ -36,23 +36,25 @@ export function HeroSection() {
           {/* Left content */}
           <div className="space-y-8">
             <motion.div {...fadeUp(0)}>
-              <Badge>Now accepting projects for Q3 2025</Badge>
+              <Badge>Now booking video & design projects</Badge>
             </motion.div>
 
             <motion.h1
               {...fadeUp(0.1)}
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight"
             >
-              We Build{" "}
-              <span className="text-gradient">Scalable Digital Products</span>{" "}Fast.
+              We Turn Film & Ideas Into{" "}
+              <span className="text-gradient">Stories People Remember</span>
             </motion.h1>
 
             <motion.p
               {...fadeUp(0.2)}
               className="text-lg text-gray-400 max-w-xl leading-relaxed"
             >
-              ScaleStack Labs partners with startups and businesses to ship web
-              apps, SaaS platforms, and APIs. No bloat, no agency overhead just clean code and real results.
+              Master Mind is a digital production company crafting standout
+              video editing, motion graphics, and graphic design. From social
+              reels to full brand identities — no templates, just original
+              work.
             </motion.p>
 
             <motion.div
@@ -107,44 +109,44 @@ export function HeroSection() {
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
                 </div>
                 <span className="text-xs font-mono text-gray-500 ml-2">
-                  ScaleStack Dashboard
+                  Master Mind Studio
                 </span>
               </div>
 
               {/* Content */}
               <div className="space-y-4 font-mono text-sm">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-500">Projects</span>
-                  <span className="text-white font-semibold">7</span>
+                  <span className="text-gray-500">Projects Delivered</span>
+                  <span className="text-white font-semibold">120+</span>
                   <span className="text-accent-500 text-xs flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-                    Active
+                    Rolling
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-500">Deployments</span>
-                  <span className="text-white font-semibold">23</span>
+                  <span className="text-gray-500">Videos Edited</span>
+                  <span className="text-white font-semibold">480+</span>
                   <span className="text-brand-400 text-xs flex items-center gap-1">
-                    ↑ This week
+                    ↑ This month
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-500">Team</span>
-                  <span className="text-white font-semibold">4</span>
-                  <span className="text-gray-500 text-xs">members</span>
+                  <span className="text-gray-500">Designs Delivered</span>
+                  <span className="text-white font-semibold">1.4k</span>
+                  <span className="text-gray-500 text-xs">and counting</span>
                 </div>
 
                 <div className="pt-4 mt-4 border-t border-white/[0.06] space-y-3">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-3.5 h-3.5 text-accent-500" />
                     <span className="text-gray-400 text-xs">
-                      Latest: E-commerce MVP
+                      Latest: Brand launch film
                     </span>
                   </div>
                   <div>
                     <div className="flex justify-between text-xs mb-1">
-                      <span className="text-gray-500">Status</span>
-                      <span className="text-brand-400">80%</span>
+                      <span className="text-gray-500">Turnaround</span>
+                      <span className="text-brand-400">48h</span>
                     </div>
                     <div className="w-full h-1.5 bg-surface-400 rounded-full overflow-hidden">
                       <div
@@ -154,7 +156,7 @@ export function HeroSection() {
                     </div>
                   </div>
                   <div className="text-xs text-gray-500">
-                    Next deploy: Today, 6pm
+                    Next delivery: Today, 6pm
                   </div>
                 </div>
               </div>

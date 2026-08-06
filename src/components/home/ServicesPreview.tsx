@@ -1,32 +1,32 @@
 "use client";
-import { Rocket, Globe, LayoutDashboard, Server, ArrowRight } from "lucide-react";
+import { Video, Image, Film, Palette, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Rocket,
-    title: "SaaS MVP Development",
-    desc: "Ship your product idea in weeks, not months",
-    href: "/services#saas",
+    icon: Video,
+    title: "Video Editing",
+    desc: "Turn footage into polished stories for social, ads, and brand video.",
+    href: "/services#video",
   },
   {
-    icon: Globe,
-    title: "Business Websites",
-    desc: "Convert visitors into customers with high-performance sites",
-    href: "/services#web",
+    icon: Image,
+    title: "Graphic Design",
+    desc: "Standout visual assets for campaigns, social, and brand identity.",
+    href: "/services#design",
   },
   {
-    icon: LayoutDashboard,
-    title: "Admin Dashboards",
-    desc: "Replace spreadsheets with real-time internal tools",
-    href: "/services#dash",
+    icon: Film,
+    title: "Motion Graphics",
+    desc: "Animated content and visuals that boost engagement and recall.",
+    href: "/services#motion",
   },
   {
-    icon: Server,
-    title: "API & Backend Systems",
-    desc: "Robust APIs that scale with your growth",
-    href: "/services#api",
+    icon: Palette,
+    title: "Brand Identity",
+    desc: "Complete creative direction for a memorable and consistent brand.",
+    href: "/services#brand",
   },
 ];
 
@@ -36,10 +36,10 @@ export function ServicesPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">
-            What We <span className="text-gradient">Build</span>
+            What We <span className="text-gradient">Create</span>
           </h2>
           <p className="mt-4 text-lg text-gray-400">
-            End-to-end product development — from idea to launch
+            Creative video, design, and motion services that bring your brand to life.
           </p>
         </AnimatedSection>
 

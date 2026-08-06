@@ -9,35 +9,35 @@ const caseStudies: Record<
     description: string;
   }
 > = {
-  "vestify-hub": {
-    title: "Vestify Hub — UK Property Investment Platform",
+  "cinematic-travel-reel": {
+    title: "Cinematic Travel Reel — Brand Film",
     description:
-      "How we built a modern property investment platform for VestifyHub.",
+      "How we cut a story-driven brand film with cinematic color grading, sound design, and social-ready edits.",
   },
-  lggc: {
-    title: "Life is Good Global Care — Healthcare Provider Website",
+  "cafe-brand-packaging": {
+    title: "Café Brand & Packaging — Brand Identity",
     description:
-      "How we built a professional healthcare website for Life is Good Global Care.",
+      "How we built a complete visual identity, packaging, and menu system for a local café.",
   },
-  "routa-ev": {
-    title: "Routa MVP — African Mobility Platform",
+  "product-launch-film": {
+    title: "Product Launch Film — Campaign Creative",
     description:
-      "How we built an MVP for Routa EV's ride-hailing, logistics, and energy platform.",
+      "How we scripted, designed, and edited a high-energy product launch film with motion graphics and ad cutdowns.",
   },
-  "qr-geek": {
-    title: "QR Geek MVP — QR Code Generation Platform",
+  "social-campaign-suite": {
+    title: "Social Campaign Suite — Social Media",
     description:
-      "How we built a simple yet powerful QR code generation platform.",
+      "How we produced a full platform-native social campaign — reels, ads, carousels, and motion stings.",
   },
-  "impact-city": {
-    title: "Impact City — Personal & Professional Development Platform",
+  "podcast-rebrand": {
+    title: "Podcast Rebrand & Edit — Podcast Production",
     description:
-      "How we built a development support platform for ImpactCity.",
+      "How we handled multi-cam podcast editing and gave a show a fresh visual identity and clip pack.",
   },
-  digitalli: {
-    title: "Digitalli — Brand Asset Management Platform",
+  "live-event-graphics": {
+    title: "Live Event Graphics — Event Production",
     description:
-      "How we built a brand asset management system for Digitalli.",
+      "How we designed LED loop content, lower thirds, and a cinematic aftermovie for a corporate gala.",
   },
 };
 
@@ -55,7 +55,7 @@ export async function generateMetadata({
   if (!study) return { title: "Not Found" };
 
   return {
-    title: `${study.title} — ScaleStack Labs`,
+    title: `${study.title} — Master Mind`,
     description: study.description,
   };
 }

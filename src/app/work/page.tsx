@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { WorkContent } from "./WorkContent";
 
 export const metadata: Metadata = {
-  title: "Our Work — ScaleStack Labs",
+  title: "Our Work — Master Mind",
   description:
-    "Case studies and projects we've built for startups and businesses.",
+    "Case studies in video editing, graphic design, and creative production for brands.",
 };
 
 export default function WorkPage() {

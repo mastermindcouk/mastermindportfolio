@@ -2,28 +2,28 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { GlowOrb } from "@/components/ui/GlowOrb";
-import { Zap, Gauge, Shield, Lightbulb } from "lucide-react";
+import { Clapperboard, PenTool, Palette, Timer } from "lucide-react";
 
 const values = [
   {
-    icon: Zap,
-    title: "Speed Without Compromise",
-    desc: "We ship fast without cutting corners. Smart architecture from day one.",
+    icon: Clapperboard,
+    title: "Story-First",
+    desc: "We lead with narrative, not just footage — every cut and design decision serves your message.",
   },
   {
-    icon: Shield,
-    title: "Built to Scale",
-    desc: "Every project is built with growth in mind — from database to deployment.",
+    icon: PenTool,
+    title: "Craft & Detail",
+    desc: "Color, typography, pacing, composition — we sweat the details that make work feel premium.",
   },
   {
-    icon: Gauge,
-    title: "Radical Transparency",
-    desc: "Weekly demos, shared Slack channel, and direct access to your builder.",
+    icon: Palette,
+    title: "On-Brand Every Time",
+    desc: "Every deliverable is built to feel like you — consistent, recognizable, and professional.",
   },
   {
-    icon: Lightbulb,
-    title: "Product Thinking First",
-    desc: "We don't just write code — we help shape your product strategy.",
+    icon: Timer,
+    title: "Deadlines You Can Trust",
+    desc: "Creative that respects your schedule, with fast turnarounds and clear communication.",
   },
 ];
 
@@ -40,13 +40,14 @@ export function AboutContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-              We&apos;re a lean team of builders obsessed with{" "}
-              <span className="text-gradient">shipping products</span> that
-              scale.
+              We&apos;re a creative studio obsessed with{" "}
+              <span className="text-gradient">telling stories</span> that move
+              people.
             </h1>
             <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
-              No account managers. No endless meetings. Just a small,
-              experienced team that designs, builds, and ships your product.
+              No cookie-cutter templates. Just a focused team of editors,
+              designers, and motion artists who craft video and visuals that
+              make your brand impossible to ignore.
             </p>
           </AnimatedSection>
         </div>
@@ -58,9 +59,9 @@ export function AboutContent() {
           <AnimatedSection>
             <div className="card-glass p-10 md:p-14 text-center max-w-4xl mx-auto">
               <p className="text-xl md:text-2xl font-display text-gray-200 leading-relaxed">
-                &ldquo;Our mission is to help startups and businesses turn ideas
-                into scalable digital products without the agency
-                overhead.&rdquo;
+                &ldquo;Our mission is to help brands of every size tell sharper,
+                more memorable stories through standout video editing and
+                graphic design — without the agency overhead.&rdquo;
               </p>
             </div>
           </AnimatedSection>

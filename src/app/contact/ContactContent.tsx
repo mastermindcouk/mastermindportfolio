@@ -14,18 +14,20 @@ import {
 } from "lucide-react";
 
 const projectTypes = [
-  "SaaS MVP",
-  "Business Website",
-  "E-commerce",
-  "Dashboard",
-  "API",
+  "Video Editing",
+  "Graphic Design",
+  "Motion Graphics",
+  "Brand Identity",
+  "Campaign Creative",
   "Other",
 ];
 
 const budgetRanges = [
-  "Business Website - ₦350,000",
-  "E-commerce - ₦500,000",
-  "Custom Projects - Let's discuss",
+  "Video Editing - Request a quote",
+  "Graphic Design - Request a quote",
+  "Motion Graphics - Request a quote",
+  "Brand Identity - Request a quote",
+  "Custom Creative Project - Let's discuss",
 ];
 
 export function ContactContent() {
@@ -111,13 +113,13 @@ export function ContactContent() {
                 </h2>
 
                 <a
-                  href="mailto:info@scalestacklab.online"
+                  href="mailto:mastermind.co.uk@gmail.com"
                   className="flex items-center gap-3 text-gray-400 hover:text-brand-400 transition-colors mb-4"
                 >
                   <div className="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-400">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">info@scalestacklab.online</span>
+                  <span className="text-sm">mastermind.co.uk@gmail.com</span>
                 </a>
 
                 <a

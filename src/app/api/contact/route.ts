@@ -18,11 +18,11 @@ export async function POST(request: Request) {
 
     const fromEmail =
       process.env.CONTACT_EMAIL_FROM || "onboarding@resend.dev";
-    const toEmail = process.env.CONTACT_EMAIL_TO || "info@scalestacklab.online";
+    const toEmail = process.env.CONTACT_EMAIL_TO || "mastermind.co.uk@gmail.com";
 
     // 1. Send notification email to the business
     const { error: businessError } = await resend.emails.send({
-      from: `ScaleStack Labs <${fromEmail}>`,
+      from: `Master Mind <${fromEmail}>`,
       to: [toEmail],
       subject: `New Inquiry from ${name}`,
       html: `
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
             </tr>
             <tr>
               <td style="background: #f9f9fb; padding: 16px 24px; text-align: center; border-top: 1px solid #eee;">
-                <p style="color: #888; font-size: 12px; margin: 0;">Sent via scalestacklab.online contact form</p>
+                <p style="color: #888; font-size: 12px; margin: 0;">Sent via mastermind.co.uk contact form</p>
               </td>
             </tr>
           </table>
@@ -89,9 +89,9 @@ export async function POST(request: Request) {
 
     // 2. Send confirmation email to the submitter
     const { error: confirmError } = await resend.emails.send({
-      from: `ScaleStack Labs <${fromEmail}>`,
+      from: `Master Mind <${fromEmail}>`,
       to: [email],
-      subject: "We received your message — ScaleStack Labs",
+      subject: "We received your message — Master Mind",
       html: `
         <!DOCTYPE html>
         <html>
@@ -107,7 +107,7 @@ export async function POST(request: Request) {
               <td style="padding: 32px 24px;">
                 <p style="color: #1a1a2e; font-size: 16px; line-height: 1.6; margin: 0 0 8px 0;">Hi <strong>${name}</strong>,</p>
                 <p style="color: #555; font-size: 15px; line-height: 1.6; margin: 0 0 20px 0;">
-                  Thanks for reaching out to <strong>ScaleStack Labs</strong>! We've received your message and we'll get back to you within <strong>24 hours</strong>.
+                  Thanks for reaching out to <strong>Master Mind</strong>! We've received your message and we'll get back to you within <strong>24 hours</strong>.
                 </p>
 
                 <div style="background: #f9f9fb; border-radius: 8px; padding: 20px; margin: 20px 0;">
@@ -141,9 +141,9 @@ export async function POST(request: Request) {
             </tr>
             <tr>
               <td style="background: #f9f9fb; padding: 24px; text-align: center; border-top: 1px solid #eee;">
-                <p style="color: #888; font-size: 13px; margin: 0;">ScaleStack Labs — Build. Scale. Ship.</p>
+                <p style="color: #888; font-size: 13px; margin: 0;">Master Mind — Video Editing &amp; Graphic Design.</p>
                 <p style="color: #aaa; font-size: 11px; margin: 4px 0 0 0;">
-                  <a href="mailto:info@scalestacklab.online" style="color: #6366f1; text-decoration: none;">info@scalestacklab.online</a>
+                  <a href="mailto:mastermind.co.uk@gmail.com" style="color: #6366f1; text-decoration: none;">mastermind.co.uk@gmail.com</a>
                 </p>
               </td>
             </tr>

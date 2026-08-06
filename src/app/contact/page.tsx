@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ContactContent } from "./ContactContent";
 
 export const metadata: Metadata = {
-  title: "Contact — ScaleStack Labs",
+  title: "Contact — Master Mind",
   description:
-    "Get in touch with ScaleStack Labs. Let's discuss your project over a free discovery call.",
+    "Get in touch with Master Mind. Let's discuss your video and design project over a free discovery call.",
 };
 
 export default function ContactPage() {
