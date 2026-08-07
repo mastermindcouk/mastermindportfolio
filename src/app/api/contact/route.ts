@@ -1,10 +1,17 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function createResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("Missing API key. Pass it to the constructor `new Resend(\"re_123\")`");
+  }
+  return new Resend(apiKey);
+}
 
 export async function POST(request: Request) {
   try {
+    const resend = createResendClient();
     const body = await request.json();
     const { name, email, projectType, budget, message } = body;
 
