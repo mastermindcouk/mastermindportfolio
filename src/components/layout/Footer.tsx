@@ -39,7 +39,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2">
-            <Image src="/images/logo.png" alt="Logo" width={100} height={100} className="w-auto" />
+            <Image src="/images/mmlogo.png" alt="Logo" width={50} height={50} className="w-[50px] h-[50px]" />
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
               Master Mind is a digital production company crafting standout
               video editing and graphic design that makes your brand
@@ -56,7 +56,7 @@ export function Footer() {
                 href="tel:+2348151073356"
                 className="text-xs text-gray-500 hover:text-brand-400 transition-colors"
               >
-                +234 815 107 3356
+                +44 7867 05259
               </a>
             </div>
           </div>
