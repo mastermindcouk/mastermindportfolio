@@ -4,6 +4,7 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { GlowOrb } from "@/components/ui/GlowOrb";
+import { projectBySlug } from "@/data/projects";
 import Link from "next/link";
 
 const studies: Record<
@@ -15,7 +16,8 @@ const studies: Record<
     solution: string;
     results: string[];
     deliverables: string[];
-    gradient: string;
+        gradient: string;
+    image?: string;
   }
 > = {
   "cinematic-travel-reel": {
@@ -117,7 +119,7 @@ const studies: Record<
 };
 
 export function CaseStudyContent({ slug }: { slug: string }) {
-  const study = studies[slug];
+      const study = projectBySlug[slug] ?? studies[slug];
   if (!study) return null;
 
   return (
@@ -151,6 +153,13 @@ export function CaseStudyContent({ slug }: { slug: string }) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className={`block bg-gradient-to-br ${study.gradient} rounded-2xl h-64 md:h-96 relative overflow-hidden group`}>
+                            {study.image && (
+                <img
+                  src={study.image}
+                  alt={study.name}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              )}
               <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-20 pointer-events-none" style={{ backgroundSize: "48px 48px" }} />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10" />
               <div className="absolute inset-0 flex items-center justify-center z-20">

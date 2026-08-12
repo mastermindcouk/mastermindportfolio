@@ -23,6 +23,15 @@ const cols = [
     ],
   },
   {
+    title: "Portfolio",
+    links: [
+      { label: "Photography", href: "/work/photography" },
+      { label: "Video Editing", href: "/work/video-editing" },
+      { label: "Graphic Design", href: "/work/graphic-design" },
+      { label: "All Work", href: "/work" },
+    ],
+  },
+  {
     title: "Connect",
     links: [
       { label: "Contact", href: "/contact" },
@@ -36,7 +45,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/[0.06] bg-surface-100 mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Brand */}
           <div className="col-span-2">
             <Image src="/images/mmlogo.png" alt="Logo" width={50} height={50} className="w-[50px] h-[50px]" />

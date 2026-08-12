@@ -13,6 +13,14 @@ const links = [
   { label: "Contact", href: "/contact" },
 ];
 
+/** Sub-navigation for the "Work" portfolio category pages. */
+const workCategories = [
+  { label: "All Work", href: "/work" },
+  { label: "Photography", href: "/work/photography" },
+  { label: "Video Editing", href: "/work/video-editing" },
+  { label: "Graphic Design", href: "/work/graphic-design" },
+];
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -38,16 +46,32 @@ export function Navbar() {
           <p>Master Mind Agency</p>
         </Link>
 
-        {/* Desktop nav */}
+                        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-surface-300 transition-all"
-            >
-              {l.label}
-            </Link>
+            <div key={l.href} className="relative group">
+              <Link
+                href={l.href}
+                className="px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-surface-300 transition-all"
+              >
+                {l.label}
+              </Link>
+              {l.label === "Work" && (
+                <div className="absolute top-full left-0 mt-2 w-48 rounded-xl bg-surface-200/90 backdrop-blur-xl border border-white/[0.06] shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-200 overflow-hidden">
+                  <div className="py-1">
+                    {workCategories.map((c) => (
+                      <Link
+                        key={c.href}
+                        href={c.href}
+                        className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-surface-300 transition-all"
+                      >
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 

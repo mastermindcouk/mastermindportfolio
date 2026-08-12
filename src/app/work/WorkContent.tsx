@@ -3,6 +3,7 @@ import { ArrowRight, Clapperboard } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { GlowOrb } from "@/components/ui/GlowOrb";
+import { CategoryBar } from "@/components/work/CategoryBar";
 import Link from "next/link";
 
 const projects = [
@@ -84,6 +85,13 @@ export function WorkContent() {
               Video and design projects we&apos;ve crafted for real brands.
             </p>
           </AnimatedSection>
+        </div>
+            </section>
+
+      {/* Category navigation */}
+      <section className="py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <CategoryBar />
         </div>
       </section>
 
