@@ -113,7 +113,7 @@ export const projects: Project[] = [
     ],
         gradient: "from-amber-900 to-orange-900",
     slug: "golden-hour-portraits",
-    image: "/images/img2.png",
+    image: "/images/img02.png",
   },
   {
     category: "photography",
