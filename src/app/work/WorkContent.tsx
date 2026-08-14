@@ -11,7 +11,7 @@ export function WorkContent() {
   const [active, setActive] = useState<Project | null>(null);
 
   const work = projects.filter(
-    (p) => p.category === "photography" || p.category === "design"
+    (p) => p.category === "photography" || p.category === "design" || p.category === "video" 
   );
 
   const handleSelect = (slug: string) => {

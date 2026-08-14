@@ -9,12 +9,16 @@ import { categories, projects, type Project } from "@/data/projects";
 /** Curated mix across all three services, pulled from the shared portfolio data. */
 const previewSlugs = [
   "dusk-on-the-high-street",
+  "halloween-party-friday",
   "urban-frames",
   "cafe-brand-packaging",
+  "last-card",
   "golden-hour-portraits",
   "the-cheesegrater",
+  "poker-jazz-night",
   "tech-brand-refresh",
   "product-still-life",
+  "the-wrap",
   "neon-nights-poster-series",
 ];
 

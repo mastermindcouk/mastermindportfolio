@@ -10,9 +10,11 @@ function labelFor(id: Project["category"]): string {
 }
 
 /**
- * Fullscreen lightbox that previews a single portfolio piece (image or, for
- * video projects without a still, a gradient placeholder). Clicking a grid
+ * Fullscreen lightbox that previews a single portfolio piece. Clicking a grid
  * card opens this in-page instead of navigating to a separate case-study page.
+ * - For media with a `video`, a fullscreen <video> player is shown (mp4).
+ * - For media with an `image`, the image is shown edge-to-edge with contain.
+ * - Projects with neither show a gradient placeholder.
  */
 export function Lightbox({
   project,
@@ -42,7 +44,7 @@ export function Lightbox({
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8"
+          className="fixed inset-0 z-[100] flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -53,31 +55,39 @@ export function Lightbox({
           aria-label={`${project.name} preview`}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/85 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/95 backdrop-blur-sm" />
 
-          {/* Card */}
+          {/* Fullscreen media */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.96 }}
+            exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-4xl rounded-2xl border border-white/10 bg-surface-200 overflow-hidden"
+            className="relative h-full w-full overflow-hidden"
           >
             {/* Close */}
             <button
               onClick={onClose}
               aria-label="Close preview"
-              className="absolute top-3 right-3 z-10 p-2 rounded-full bg-black/50 text-white/90 hover:bg-black/70 transition-colors"
+              className="absolute top-4 right-4 z-20 p-3 rounded-full bg-black/60 text-white/90 hover:bg-black/80 border border-white/10 transition-colors"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
 
-            {/* Media */}
-            <div
-              className={`relative w-full aspect-video overflow-hidden bg-gradient-to-br ${project.gradient}`}
-            >
-              {project.image ? (
+            {project.video ? (
+              <video
+                key={project.video}
+                src={project.video}
+                controls
+                autoPlay
+                playsInline
+                className="h-full w-full object-contain"
+              />
+            ) : project.image ? (
+              <div
+                className={`relative h-full w-full bg-gradient-to-br ${project.gradient}`}
+              >
                 <Image
                   src={project.image}
                   alt={project.name}
@@ -85,26 +95,28 @@ export function Lightbox({
                   sizes="100vw"
                   className="object-contain"
                 />
-              ) : (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white/85">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
-                    <Play className="h-6 w-6" />
-                  </span>
-                  <p className="text-sm text-white/70">{project.name}</p>
-                </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <div
+                className={`h-full w-full bg-gradient-to-br ${project.gradient} flex flex-col items-center justify-center gap-3 text-white/85`}
+              >
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
+                  <Play className="h-7 w-7" />
+                </span>
+                <p className="text-sm text-white/70">{project.name}</p>
+              </div>
+            )}
 
             {/* Caption */}
-            <div className="flex items-center justify-between gap-4 p-5">
+            <div className="absolute bottom-0 inset-x-0 z-10 flex items-center justify-between gap-4 px-6 py-5 bg-gradient-to-t from-black/85 to-transparent">
               <div>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-500/15 text-brand-400 border border-brand-500/20 mb-2">
                   {labelFor(project.category)}
                 </span>
                 <h3 className="text-lg font-bold text-white">{project.name}</h3>
               </div>
-              <p className="text-xs text-gray-500 hidden sm:block">
-                {project.tag}
+              <p className="text-xs text-gray-400 hidden sm:block">
+                {project.tag} · click anywhere to close
               </p>
             </div>
           </motion.div>

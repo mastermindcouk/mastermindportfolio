@@ -19,6 +19,8 @@ export type Project = {
     gradient: string;
   slug: string;
   image?: string;
+  /** Direct file (mp4) to play fullscreen in the lightbox for video work. */
+  video?: string;
 };
 
 /**
@@ -194,103 +196,87 @@ export const projects: Project[] = [
     // ── Video Editing ────────────────────────────────────────────
   {
     category: "video",
-    tag: "Brand Film",
-    name: "Cinematic Travel Reel",
+    tag: "Events",
+    name: "Halloween Party Friday",
     blurb:
-      "A story-driven brand film cut from raw travel footage with cinematic color grading, sound design, and social-ready edits.",
+      "A high-energy event film capturing the full vibe of a Halloween party night — punchy cuts, beat-synced transitions, and a playlist-driven edit that keeps the energy rolling to the last frame.",
     problem:
-      "A travel brand had hours of beautiful raw footage but nothing that told their story in a way audiences connected with — flat edits, inconsistent color, and no sound design.",
+      "The client wanted a shareable recap of their Halloween party that felt as electric as the night itself, not a flat slideshow of clips.",
     solution:
-      "We cut a story-driven brand film built around a clear narrative arc — cinematic color grading, layered sound design, and branded motion titles. The reel was then re-cut into platform-native versions for reels, stories, and paid placements.",
+      "We trimmed hours of footage into a tight, music-synced event film with snappy cuts, burst-style transitions, and on-beat pacing, then graded it with a dark purple-orange Halloween palette to match the event's mood.",
     results: [
-      "A cinematic brand film that actually told a story",
-      "Consistent, film-grade color across every shot",
-      "Sound design and mix that raised production value",
-      "Social-ready cutdowns for every major platform",
+      "A punchy, beat-synced recap that matched the energy of the night",
+      "Halloween-grade color treatment for a cohesive look",
+      "A shareable film cut for stories, reels, and paid boosts",
+      "High engagement with attendees tagged across socials",
     ],
-    deliverables: ["Color Grading", "Sound Design", "Social Cuts", "Motion Titles"],
-    gradient: "from-brand-900 to-brand-700",
-    slug: "cinematic-travel-reel",
+    deliverables: ["Event Recap Edit", "Music Sync", "Color Grading", "Social Cuts"],
+    gradient: "from-orange-900 to-purple-950",
+    slug: "halloween-party-friday",
+    video: "/images/halloween-party-friday.mp4",
   },
   {
     category: "video",
     tag: "Campaign",
-    name: "Product Launch Film",
+    name: "Last Card",
     blurb:
-      "A high-energy launch film with motion graphics, kinetic type, and ad cutdowns that drove thousands of views across paid channels.",
+      "A dramatic, tension-driven promo edit built around a single moment — slow-build pacing, suspenseful music, and a reveal that lands exactly on the beat.",
     problem:
-      "A company was launching a new product with no strong launch creative — they needed a hero film that would excite an audience and convert paid ad traffic.",
+      "A poker/card brand needed a promo that built suspense rather than just showing footage, so the reveal would feel earned and memorable.",
     solution:
-      "We scripted, designed, and edited a high-energy launch film combining live product footage with motion graphics and kinetic typography. We then produced multiple ad cutdowns, thumbnails, and platform variants to maximize reach across paid channels.",
+      "We structured the edit around a narrative build — slow tension, layered sound, and quickening cuts — leading to a final reveal timed precisely to the musical drop for maximum impact.",
     results: [
-      "Thousands of views across paid and organic channels",
-      "A hero film and ad cutdowns for every platform",
-      "Kinetic type and motion that boosted engagement and recall",
-      "A launch asset pack ready for multi-channel rollout",
+      "A suspenseful edit with a reveal timed to the beat drop",
+      "Layered sound design that builds and releases tension",
+      "A promo that stands out in crowded feeds",
+      "Reusable pacing template for future reveals",
     ],
-    deliverables: ["Scripting", "Motion Graphics", "Ad Cutdowns", "Thumbnails"],
-    gradient: "from-purple-900 via-brand-900 to-surface-400",
-    slug: "product-launch-film",
-  },
-  {
-    category: "video",
-    tag: "Social Media",
-    name: "Social Campaign Suite",
-    blurb:
-      "A full set of platform-native reels, static ads, carousels, and motion stings that kept a DTC brand consistent and engaging all month.",
-    problem:
-      "A DTC brand was posting inconsistently with disjointed visuals and low engagement — they needed a monthly content system that was on-brand and built for each platform.",
-    solution:
-      "We produced a full campaign suite — platform-native reels, static ads, carousels, and motion stings — designed from one creative direction. Every asset was delivered in the right format for its channel so the brand stayed consistent and engaging all month.",
-    results: [
-      "A complete, platform-native monthly content kit",
-      "Consistent on-brand visuals across every channel",
-      "Higher engagement from reels and motion content",
-      "Clear system the brand can brief and scale",
-    ],
-    deliverables: ["Reels Editing", "Static Ads", "Carousels", "Motion Stings"],
-    gradient: "from-brand-900 to-brand-700",
-    slug: "social-campaign-suite",
-  },
-    {
-    category: "video",
-    tag: "Podcast",
-    name: "Podcast Rebrand & Edit",
-    blurb:
-      "Multi-cam podcast editing with a fresh visual identity — intro animation, lower thirds, and a clip pack built for social distribution.",
-    problem:
-      "A growing podcast had great conversations but dated visuals and slow, boring edits — episodes weren't standing out in crowded feeds.",
-    solution:
-      "We handled the full multi-cam edit and gave the show a fresh identity — a new intro animation, lower thirds, and show-notes graphics. We also cut a social clip pack so every episode could be promoted across platforms.",
-    results: [
-      "Polished multi-cam edits that keep viewers hooked",
-      "A refreshed visual identity that looks professional",
-      "Lower thirds and motion that reinforce the brand",
-      "A ready-to-post clip pack for every episode",
-    ],
-    deliverables: ["Multi-cam Edit", "Show Notes Graphics", "Intro Animation", "Clip Pack"],
-    gradient: "from-emerald-900 to-emerald-700",
-    slug: "podcast-rebrand",
+    deliverables: ["Promo Edit", "Pacing & Structure", "Sound Design", "Beat-Synced Reveal"],
+    gradient: "from-red-950 to-surface-400",
+    slug: "last-card",
+    video: "/images/last-card.mp4",
   },
   {
     category: "video",
     tag: "Events",
-    name: "Live Event Graphics",
+    name: "Poker & Jazz Night",
     blurb:
-      "LED loop content, lower thirds, title cards, and a polished aftermovie edit that made a corporate gala feel broadcast-ready.",
+      "A moody event film pairing smooth jazz energy with poker table tension — seamless multi-scene coverage edited into one cinematic night.",
     problem:
-      "A corporate gala needed broadcast-quality visuals — LED loop content, speaker titles, and a polished aftermovie — to feel as professional as the event itself.",
+      "The event blended two very different moods — laid-back jazz and competitive poker — and the recap needed to capture both without feeling disjointed.",
     solution:
-      "We designed and delivered LED loop content, lower thirds, and title cards for the live screens, then cut a cinematic aftermovie edit that captured the energy of the night and gave the brand shareable content afterward.",
+      "We wove together table play, live jazz, and crowd reactions into a single cinematic flow, cutting on the music and using cross-fades to bridge the calm and the tension.",
     results: [
-      "Broadcast-ready visuals across all live screens",
-      "Clean speaker titles and lower thirds throughout",
-      "A cinematic aftermovie the brand can reuse for months",
-      "An event that looked as premium as it felt",
+      "One cohesive film balancing jazz and poker atmospheres",
+      "Music-led editing that smooths scene transitions",
+      "A cinematic, shareable record of the night",
+      "Reusable edit templates for recurring events",
     ],
-    deliverables: ["LED Loop Content", "Lower Thirds", "Title Cards", "Aftermovie Edit"],
-    gradient: "from-purple-900 via-brand-900 to-surface-400",
-    slug: "live-event-graphics",
+    deliverables: ["Event Recap Edit", "Multi-Scene Coverage", "Music-Led Editing", "Color Grading"],
+    gradient: "from-amber-950 to-zinc-900",
+    slug: "poker-jazz-night",
+    video: "/images/poker-Jazznight.mp4",
+  },
+  {
+    category: "video",
+    tag: "Brand Film",
+    name: "The Wrap",
+    blurb:
+      "A clean, professional wrap-up film that ties a production together — polished pacing, tidy transitions, and a finish that leaves the client looking sharp.",
+    problem:
+      "The client needed a concise, polished closing film that summarized a production professionally without dragging or feeling rushed.",
+    solution:
+      "We cut a tight, well-paced wrap film with clean transitions, on-brand title cards, and a confident ending card, delivering a polished piece ready for client handoff and social sharing.",
+    results: [
+      "A concise, polished wrap-up with clean pacing",
+      "On-brand title and end cards",
+      "A professional finish suitable for client delivery",
+      "Ready-to-share across web and socials",
+    ],
+    deliverables: ["Wrap-Up Edit", "Title Cards", "Clean Transitions", "Delivery Master"],
+    gradient: "from-sky-950 to-brand-900",
+    slug: "the-wrap",
+    video: "/images/wrap.mp4",
   },
   // ── Graphic Design ───────────────────────────────────────────
   {
