@@ -23,12 +23,24 @@ export function WorkCard({
       >
         {/* Cover preview */}
                 <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${project.gradient}`}>
-          {project.image && (
-            <img
-              src={project.image}
-              alt={project.name}
+          {project.video ? (
+            <video
+              src={project.video}
+              muted
+              loop
+              autoPlay
+              playsInline
+              preload="auto"
               className="absolute inset-0 h-full w-full object-cover"
             />
+          ) : (
+            project.image && (
+              <img
+                src={project.image}
+                alt={project.name}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )
           )}
           <div
             className="absolute inset-0 bg-grid-pattern bg-grid opacity-20 pointer-events-none"

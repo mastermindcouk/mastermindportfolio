@@ -64,13 +64,25 @@ export function FeaturedWork() {
                 <div
                   className={`relative aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br ${p.gradient} border border-white/[0.06]`}
                 >
-                  {p.image && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={p.image}
-                      alt={p.name}
+                  {p.video ? (
+                    <video
+                      src={p.video}
+                      muted
+                      loop
+                      autoPlay
+                      playsInline
+                      preload="auto"
                       className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                  ) : (
+                    p.image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={p.image}
+                        alt={p.name}
+                        className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    )
                   )}
                   <div className="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors" />
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
