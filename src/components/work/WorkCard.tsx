@@ -1,6 +1,5 @@
 "use client";
 import { ArrowRight, Clapperboard } from "lucide-react";
-import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { Project } from "@/data/projects";
@@ -8,13 +7,20 @@ import { Project } from "@/data/projects";
 export function WorkCard({
   project,
   index = 0,
+  onSelect,
 }: {
   project: Project;
   index?: number;
+  onSelect?: (project: Project) => void;
 }) {
   return (
     <AnimatedSection delay={(index % 6) * 0.05}>
-      <div className="card-glass overflow-hidden hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 h-full group">
+      <div
+        onClick={onSelect ? () => onSelect(project) : undefined}
+        role={onSelect ? "button" : undefined}
+        tabIndex={onSelect ? 0 : undefined}
+        className="card-glass overflow-hidden hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 h-full group cursor-pointer"
+      >
         {/* Cover preview */}
                 <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${project.gradient}`}>
           {project.image && (
@@ -32,7 +38,7 @@ export function WorkCard({
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-600/80 px-4 py-2 rounded-full">
               <Clapperboard className="w-4 h-4" />
-              View Case Study
+              View
             </span>
           </div>
         </div>
@@ -57,12 +63,9 @@ export function WorkCard({
               </span>
             ))}
           </div>
-          <Link
-            href={`/work/${project.slug}`}
-            className="inline-flex items-center gap-1 text-sm font-medium text-brand-400 hover:gap-2 transition-all"
-          >
-            View Case Study <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          <span className="inline-flex items-center gap-1 text-sm font-medium text-brand-400">
+            View <ArrowRight className="w-3.5 h-3.5" />
+          </span>
         </div>
       </div>
     </AnimatedSection>

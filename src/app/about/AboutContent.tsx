@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { GlowOrb } from "@/components/ui/GlowOrb";
+import { Process } from "@/components/home/Process";
 import { Clapperboard, PenTool, Palette, Timer } from "lucide-react";
 
 const values = [
@@ -98,6 +99,10 @@ export function AboutContent() {
           </div>
         </div>
       </section>
+
+      {/* How We Work */}
+      <Process />
+
     </>
   );
 }

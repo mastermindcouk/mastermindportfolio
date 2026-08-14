@@ -1,7 +1,14 @@
 "use client";
+import { useState } from "react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { GlowOrb } from "@/components/ui/GlowOrb";
-import { ProjectCategory, categories, projects } from "@/data/projects";
+import { Lightbox } from "@/components/ui/Lightbox";
+import {
+  ProjectCategory,
+  categories,
+  projects,
+  type Project,
+} from "@/data/projects";
 import { CategoryBar } from "@/components/work/CategoryBar";
 import { WorkCard } from "@/components/work/WorkCard";
 
@@ -14,6 +21,7 @@ export function CategoryWorkContent({
   title: string;
   description: string;
 }) {
+  const [active, setActive] = useState<Project | null>(null);
   const label = categories.find((c) => c.id === category)?.label ?? title;
   const categoryProjects = projects.filter((p) => p.category === category);
 
@@ -49,12 +57,14 @@ export function CategoryWorkContent({
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryProjects.map((p, i) => (
-                <WorkCard key={p.slug} project={p} index={i} />
+                <WorkCard key={p.slug} project={p} index={i} onSelect={setActive} />
               ))}
             </div>
           )}
         </div>
       </section>
+
+      <Lightbox project={active} onClose={() => setActive(null)} />
     </>
   );
 }

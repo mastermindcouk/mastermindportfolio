@@ -37,7 +37,7 @@ const studies: Record<
     gradient: "from-brand-900 to-brand-700",
   },
   "cafe-brand-packaging": {
-    name: "Café Brand & Packaging",
+    name: "The Training Theatre - Course Promo Design",
     tag: "Brand Identity",
     problem:
       "A beloved local café had strong coffee but a forgettable, inconsistent look — mismatched menus, packaging, and social graphics that didn't reflect the quality of the product.",
@@ -242,7 +242,7 @@ export function CaseStudyContent({ slug }: { slug: string }) {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button href="/contact" variant="primary" size="lg">
-                Start a Project →
+                Work with us →
               </Button>
             </div>
           </AnimatedSection>

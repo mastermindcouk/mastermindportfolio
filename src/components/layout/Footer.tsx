@@ -16,10 +16,9 @@ const cols = [
   {
     title: "Services",
     links: [
-      { label: "Video Editing", href: "/services#video" },
-      { label: "Graphic Design", href: "/services#design" },
-      { label: "Motion Graphics", href: "/services#motion" },
-      { label: "Brand Identity", href: "/services#brand" },
+      { label: "Video Editing", href: "/work/video-editing" },
+      { label: "Graphic Design", href: "/work/graphic-design" },
+      { label: "Photography", href: "/work/photography" },
     ],
   },
   {

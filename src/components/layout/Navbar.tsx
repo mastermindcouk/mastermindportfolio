@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 const links = [
-  { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -15,7 +14,6 @@ const links = [
 
 /** Sub-navigation for the "Work" portfolio category pages. */
 const workCategories = [
-  { label: "All Work", href: "/work" },
   { label: "Photography", href: "/work/photography" },
   { label: "Video Editing", href: "/work/video-editing" },
   { label: "Graphic Design", href: "/work/graphic-design" },
@@ -77,11 +75,8 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Button href="/contact" variant="secondary" size="sm">
-            Book a Call
-          </Button>
           <Button href="/contact" variant="primary" size="sm">
-            Start a Project →
+            Work with us →
           </Button>
         </div>
 
@@ -116,11 +111,8 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="mt-3 flex flex-col gap-2 pt-3 border-t border-white/[0.06]">
-                <Button href="/contact" variant="secondary" size="sm">
-                  Book a Call
-                </Button>
                 <Button href="/contact" variant="primary" size="sm">
-                  Start a Project →
+                  Work with us →
                 </Button>
               </div>
             </div>

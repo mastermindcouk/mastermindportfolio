@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     category: "photography",
     tag: "Street Photography",
-    name: "Urban Frames",
+    name: "Window Study, London",
     blurb:
       "A gritty, high-contrast street photography series capturing raw moments across Lagos — shot on 35mm film and digitized with a bold monochrome and amber tone grade.",
     problem:
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     {
     category: "photography",
     tag: "Portrait Photography",
-    name: "Golden Hour Portraits",
+    name: "Streetwear Editorial, Suburban Backdrop",
     blurb:
       "A warm, golden-hour portrait series for a wellness brand — natural light, soft focus, and a sun-kissed palette that feels alive and inviting.",
     problem:
@@ -116,7 +116,7 @@ export const projects: Project[] = [
   {
     category: "photography",
     tag: "Commercial Photography",
-    name: "Product Still Life",
+    name: "Clouds & Carriageway",
     blurb:
       "Clean, high-detail product photography for a tech accessories line — crisp lighting and minimalist setups that let the products speak.",
     problem:
@@ -138,6 +138,58 @@ export const projects: Project[] = [
         gradient: "from-rose-900 to-pink-900",
     slug: "product-still-life",
     image: "/images/img3.PNG",
+  },
+  {
+    category: "photography",
+    tag: "Commercial Photography",
+    name: "Dusk on the High Street",
+    blurb:
+      "Clean, high-detail product photography for a tech accessories line — crisp lighting and minimalist setups that let the products speak.",
+    problem:
+      "A tech accessories brand's product photos were flat, inconsistently lit, and lost detail — making their sleek hardware look cheap online.",
+    solution:
+      "We shot a clean commercial still life series with controlled key lighting and minimal reflective backgrounds, capturing every detail of the hardware. The consistent look was applied across their store, listings, and ad creative.",
+    results: [
+      "Consistent, crisp product imagery across the full catalog",
+      "Hardware details clearly visible — boosting purchase confidence",
+      "Increased add-to-cart rate on product pages",
+      "Reusable style guide for future product drops",
+    ],
+    deliverables: [
+      "Commercial Product Photography",
+      "Controlled Lighting Setup",
+      "Multi-Angle Shots",
+      "Web & Print Crops",
+    ],
+        gradient: "from-rose-900 to-pink-900",
+    slug: "dusk-on-the-high-street",
+    image: "/images/img4.PNG",
+  },
+  {
+    category: "photography",
+    tag: "Commercial Photography",
+    name: "The Cheesegrater",
+    blurb:
+      "Clean, high-detail product photography for a tech accessories line — crisp lighting and minimalist setups that let the products speak.",
+    problem:
+      "A tech accessories brand's product photos were flat, inconsistently lit, and lost detail — making their sleek hardware look cheap online.",
+    solution:
+      "We shot a clean commercial still life series with controlled key lighting and minimal reflective backgrounds, capturing every detail of the hardware. The consistent look was applied across their store, listings, and ad creative.",
+    results: [
+      "Consistent, crisp product imagery across the full catalog",
+      "Hardware details clearly visible — boosting purchase confidence",
+      "Increased add-to-cart rate on product pages",
+      "Reusable style guide for future product drops",
+    ],
+    deliverables: [
+      "Commercial Product Photography",
+      "Controlled Lighting Setup",
+      "Multi-Angle Shots",
+      "Web & Print Crops",
+    ],
+        gradient: "from-rose-900 to-pink-900",
+    slug: "the-cheesegrater",
+    image: "/images/img5.PNG",
   },
     // ── Video Editing ────────────────────────────────────────────
   {
@@ -244,7 +296,7 @@ export const projects: Project[] = [
   {
     category: "design",
     tag: "Brand Identity",
-    name: "Café Brand & Packaging",
+    name: "The Training Theatre - Course Promo Design",
     blurb:
       "A complete visual identity system — logo, palette, packaging, and menu design — that turned a local café into a beloved brand.",
     problem:
@@ -265,7 +317,7 @@ export const projects: Project[] = [
     {
     category: "design",
     tag: "Poster Series",
-    name: "Neon Nights Poster Series",
+    name: "Stay Relevant Campaign Poster",
     blurb:
       "A bold poster series for a music venue — neon-soaked layouts, punchy typography, and a retro-future vibe that pops on walls and feeds.",
     problem:
@@ -286,7 +338,7 @@ export const projects: Project[] = [
   {
     category: "design",
     tag: "Brand Refresh",
-    name: "Tech Brand Refresh",
+    name: "The Right Care Recruitment Ad",
     blurb:
       "A modern brand refresh for a fintech startup — cleaner logo treatment, a restrained color system, and a flexible identity that scales from app to deck.",
     problem:

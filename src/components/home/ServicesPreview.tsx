@@ -1,5 +1,5 @@
 "use client";
-import { Video, Image, Film, Palette, ArrowRight } from "lucide-react";
+import { Video, Palette, Camera, ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import Link from "next/link";
 
@@ -7,65 +7,57 @@ const services = [
   {
     icon: Video,
     title: "Video Editing",
-    desc: "Turn footage into polished stories for social, ads, and brand video.",
-    href: "/services#video",
-  },
-  {
-    icon: Image,
-    title: "Graphic Design",
-    desc: "Standout visual assets for campaigns, social, and brand identity.",
-    href: "/services#design",
-  },
-  {
-    icon: Film,
-    title: "Motion Graphics",
-    desc: "Animated content and visuals that boost engagement and recall.",
-    href: "/services#motion",
+    desc: "Story-driven edits and color grading that make your footage move people.",
+    href: "/work/video-editing",
   },
   {
     icon: Palette,
-    title: "Brand Identity",
-    desc: "Complete creative direction for a memorable and consistent brand.",
-    href: "/services#brand",
+    title: "Graphic Design",
+    desc: "Brand identity and campaign visuals — original, on-brand, no templates.",
+    href: "/work/graphic-design",
+  },
+  {
+    icon: Camera,
+    title: "Photography",
+    desc: "Street, portrait, and commercial photography with a film-inspired eye.",
+    href: "/work/photography",
   },
 ];
 
 export function ServicesPreview() {
   return (
-    <section className="relative py-24">
+    <section className="relative py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            What We <span className="text-gradient">Create</span>
+            What we <span className="text-gradient">do</span>
           </h2>
           <p className="mt-4 text-lg text-gray-400">
-            Creative video, design, and motion services that bring your brand to life.
+            Three core disciplines, one standard — work we&apos;re proud to put
+            our name on.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
               <AnimatedSection key={s.title} delay={i * 0.1}>
                 <Link
                   href={s.href}
-                  className="card-glass p-6 block group hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                  className="card-glass p-8 block group hover:border-brand-500/30 hover:bg-surface-300/80 transition-all duration-300 h-full"
                 >
-                  {/* Top glow on hover */}
-                  <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-brand-500/0 to-transparent group-hover:via-brand-500/60 transition-all duration-500" />
-
-                  <div className="rounded-xl bg-brand-500/10 p-3 w-fit text-brand-400 group-hover:bg-brand-500/20 transition-colors mb-4">
+                  <div className="rounded-xl bg-brand-500/10 p-3 w-fit text-brand-400 mb-5 group-hover:bg-brand-500/20 transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-1">
+                  <h3 className="text-lg font-semibold text-white mb-2">
                     {s.title}
                   </h3>
                   <p className="text-sm text-gray-400 leading-relaxed">
                     {s.desc}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-sm text-brand-400 opacity-0 group-hover:opacity-100 transition-opacity mt-3">
-                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                  <span className="inline-flex items-center gap-1 text-sm text-brand-400 mt-4">
+                    View work <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
               </AnimatedSection>
